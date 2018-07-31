@@ -37,7 +37,8 @@ sudo passwd -u root</p>
 <p>Poner <code>apply</code> y luego apagar y prender el ethernet device.<br>
 <code>ip address</code> nos debería indicar bien nuestra dirección IP</p>
 <h2 id="hosts">hosts</h2>
-<p>Tengo un script que ayuda a configurar los hosts.</p>
+<p>Tengo un script que ayuda a configurar los hosts.<br>
+De aquí en adelante hay que <strong>convertirnos en root.</strong></p>
 <blockquote>
 <p>su<br>
 cd<br>
@@ -60,17 +61,14 @@ cd configs<br>
 <blockquote>
 <p>update-grub</p>
 </blockquote>
-<h1 id="nfs">NFS</h1>
-<p>Para que más adelante veamos <code>/home/inb</code>es importante que primero pongamos el NFS y arreglemos <code>fstab</code></p>
-<blockquote>
-<p>fmrilab_fix_fstab.sh<br>
-mount -av</p>
-</blockquote>
-<h1 id="autofs">autofs</h1>
-<p>Normalmente haríamos un <code>apt install autofs</code>y luego configuraríamos <code>/etc/auto.master</code>y <code>/etc/auto.misc</code> pero mejor corremos un script para ello:</p>
+<h1 id="nfs-y-autofs">NFS y autofs</h1>
+<p>Para que más adelante veamos <code>/home/inb</code>es importante que primero pongamos el NFS. <em>Antes poníamos <code>/home/inb</code> a través del fstab, pero resulta en muchos problemas de timeout que se van si utilizamos los homes a través de autofs</em></p>
+<p>Corremos un script para ello:</p>
 <blockquote>
 <p>./fmrilab_fix_misc.sh</p>
 </blockquote>
+<p><strong>Ojo:</strong> Dado que /home de la máquina va a ser cubierto por /home indicado por autofs, el HOME del primer usuario de la máquina se va a desaparecer (no borrar, pero inaccesible porque hay una capa de autofs sobre /home). Para evitar problemas, el script de arriba va a cambiar el home del primer usuario a una carpeta adentro de <code>/localhome</code></p>
+<p><strong>Ojo2</strong> El script también instalará <code>cachefilesd</code> para agilizar (en teoría) el acceso de los homes montados mediante nfs. Para ello, la ruta montada indicada en<code>auto.home</code> tiene 	 la opción <code>fsc</code>.</p>
 <h1 id="nis">NIS</h1>
 <p>Y para evitar problemas próximos, agregamos a <code>soporte</code> como sudoer</p>
 <blockquote>
@@ -87,7 +85,7 @@ mount -av</p>
 <p>Preguntará por un dominio, el cual es <code>fmrilab</code></p>
 <p><strong>OJO</strong> El password de <code>soporte</code>, al ser designado por el NIS, es el mismo de siempre.</p>
 <p><strong>OJO2</strong> El script <code>fmrilab_config_nis.sh</code> contiene un paso muy interesante (latoso de encontrar solución) que elimina un problema de incompatibilidad entre <code>systemd.login</code> y <code>NIS</code>.  Para leer al respecto, vale la pena checar <a href="https://wiki.archlinux.org/index.php/NIS#.2Fetc.2Fpam.d.2Fpasswd">este link</a>, y la versión <em>ubuntizada</em> en <a href="https://askubuntu.com/questions/1031022/using-nis-client-in-ubuntu-18-04-crashes-both-gnome-and-unity">este otro link</a>.</p>
-<h1 id="nfs-1">NFS</h1>
+<h1 id="nfs">NFS</h1>
 <p>Instalamos lo necesario</p>
 <blockquote>
 <p>apt install nfs-kernel-server</p>
@@ -108,12 +106,17 @@ mount -av</p>
 </blockquote>
 <p>Revisasr cuál es el driver que podemos usar, y nos dice qué paquete pasar a <code>apt</code>, por ejemplo:</p>
 <blockquote>
-<p>sudo apt install nvidia-driver-390</p>
+<p>apt install nvidia-driver-390</p>
+</blockquote>
+<h1 id="configurar-software">Configurar software</h1>
+<p>El software está centralizado. Algunas librerías y dependencias cambiaron entre ubuntu 14.04 y 18.04. Para arreglarlo, corremos el script</p>
+<blockquote>
+<p>./fmrilab_softwareconfig.sh</p>
 </blockquote>
 <h1 id="reboot">reboot</h1>
 <p>Antes de hacerlo, es buen momento para un</p>
 <blockquote>
-<p>sudo apt update<br>
-sudo apt upgrade</p>
+<p>apt update<br>
+apt upgrade</p>
 </blockquote>
 
