@@ -99,7 +99,13 @@ cd configs<br>
 <blockquote>
 <p>/etc/init.d/nfs-kernel-server restart</p>
 </blockquote>
-<h1 id="nvidia-driver">Nvidia driver</h1>
+<h1 id="nvidia-driver-opcional">Nvidia driver (opcional)</h1>
+<p>Para saber si tenemos una tarjeta Nvidia, podemos abrir la PC y ver la tarjeta, o desde una terminal:</p>
+<blockquote>
+<p>lspci | grep VGA</p>
+</blockquote>
+<p>Si regresa algo como <code>VGA compatible controller: NVIDIA Corporation</code>, entonces sí tenemos una Nvidia.</p>
+<p>Si regresa algo como <code>VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI]</code>,  en ese caso no se debe seguir este paso. Me falta saber cómo instalar la aceleración de AMD.</p>
 <p>Idealmente se debe poner el driver mediante la interface gráfica desde el inicio de la instalación de ubuntu, pero si se nos olvidó, se puede ahora.</p>
 <blockquote>
 <p>sudo ubuntu-driver devices</p>
