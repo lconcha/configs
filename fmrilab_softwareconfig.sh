@@ -5,7 +5,7 @@ apt install arc-theme \
   git g++ python-numpy \
   libeigen3-dev zlib1g-dev libqt4-opengl-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev \
   libcanberra-gtk3-module \
-  google-chrome chromium-browser chrome-gnome-shell \
+  chromium-browser chrome-gnome-shell \
   x2goclient sshfs \
   inkscape keepassx \
   gdebi-core htop tree curl
