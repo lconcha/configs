@@ -101,11 +101,11 @@ cd configs
 <pre><code>./fmrilab_softwareconfig.sh
 </code></pre>
 <p>Esto instala también varios programas que queremos que estén en la propia máquina (no centralizados, como fsl, mrtrix o freesurfer), por ejemplo: rstudio, google-chrome, chromium-browser, x2go, sshfs, inkscape, keepass, htop, tree, curl. Además se aprovecha para instalar (en un solo paso), los programas que se requieren para que mrtrix, fsl y freesurfer corran bien (tcsh, libmng, libgtkglext1, etc).</p>
-<h1 id="reboot-1">reboot</h1>
-<p>Antes de hacerlo, es buen momento para un</p>
+<p>Ya casi vamos a rebootear, así que ahora:</p>
 <pre><code>apt update
 apt upgrade
 </code></pre>
+<h1 id="reboot-1">reboot</h1>
 <h1 id="sge">SGE</h1>
 <p>Todas las computadoras, excepto <code>tesla</code>, son nodos <code>submit</code> y <code>exec</code> dentro del cluster <code>fmrilab</code>. Configuremos una nueva computadora así. Para configurarla, hay que hacer ciertos pasos en la nueva computadora, a la que llamaremos <code>NEWHOST</code> (nombres comunes en el laboratorio son purcell, ernst, rhesus, arwen, etc. El servidor es <code>tesla</code>.</p>
 <h2 id="login-en-newhost">Login en <code>NEWHOST</code></h2>
