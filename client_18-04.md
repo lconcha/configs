@@ -105,4 +105,36 @@ cd configs
 <pre><code>apt update
 apt upgrade
 </code></pre>
+<h1 id="sge">SGE</h1>
+<p>Todas las computadoras, excepto <code>tesla</code>, son nodos <code>submit</code> y <code>exec</code> dentro del cluster <code>fmrilab</code>. Configuremos una nueva computadora así. Para configurarla, hay que hacer ciertos pasos en la nueva computadora, a la que llamaremos <code>NEWHOST</code> (nombres comunes en el laboratorio son purcell, ernst, rhesus, arwen, etc. El servidor es <code>tesla</code>.</p>
+<h2 id="login-en-newhost">Login en <code>NEWHOST</code></h2>
+<p>Primero, hacemos login como <code>root</code> para instalar lo necesario en <code>NEWHOST</code></p>
+<pre><code>apt install gridengine-exec gridengine-client
+</code></pre>
+<p>Este comando nos preguntará el <code>CELL name</code>, y ahí pondremos <code>fmrilab</code></p>
+<h2 id="login-en-tesla">Login en <code>tesla</code></h2>
+<p>Ahora hacemos login somo <code>soporte</code> en <code>tesla</code> para agregar el nodo como exec y submit.</p>
+<pre><code>qconf -mq all.q
+</code></pre>
+<p>Esto abrirá un editor de texto con la configuración de la cola <code>all.q</code>. Agregar el host (<code>NEWHOST</code>, usando el nombre que le dimos) a la lista de hosts. (si el editor es vi, recuerda que presionar <code>i</code> nos permitirá editar, y para salir y grabar presionamos <code>ESC</code> y escribimos: <code>wq</code>).</p>
+<p>Agregamos el NEWHOST al grupo de hosts</p>
+<pre><code>qconf -mhgrp @allhosts
+</code></pre>
+<p>Agregamos NEWHOST como submit host</p>
+<pre><code>qconf -as NEWHOSTNAME
+</code></pre>
+<p>Agregamos NEWHOST como exec host</p>
+<pre><code>qconf -ae NEWHOSTNAME
+</code></pre>
+<p>Es opcional, pero a mí me gusta cambiar el número máximo de slots para correr jobs de cada nuevo exec host. En general, la fórmula para número de slots es <code>nslots = nprocesadores - 1</code>. Para saber cuántos procesadores tenemos, podemos usar <code>nproc</code>.</p>
+<pre><code>qconf -aattr queue slots “[NEWHOSTNAME.inb.unam.mx=7]" all.q
+</code></pre>
+<h2 id="login-en-newhost-1">Login en <code>NEWHOST</code></h2>
+<p>reconfigurar SGE para que ya lo reconozca el servidor.</p>
+<pre><code>sudo dpkg-reconfigure gridengine-exec
+</code></pre>
+<p>Ya debería ser posible ver el nuevo host usando</p>
+<pre><code>qstat -f
+</code></pre>
+<p>Si no está bien configurado, aparecerá el NEWHOST como <code>N/A</code>.</p>
 
