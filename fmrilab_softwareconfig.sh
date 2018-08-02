@@ -21,6 +21,9 @@ apt install arc-theme \
 #apt install r-base
 wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
 gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
+ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
+
+
 
 # para fsl 509
 # apt install libmng-dev
@@ -32,7 +35,7 @@ cp -v $f /usr/lib/x86_64-linux-gnu/
 
 # para mrtrix
 # apt install libgtkglext1
-f=`locate libgsl.so. | head -n 1`
+f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
 ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
 # para freesurfer 5.3
