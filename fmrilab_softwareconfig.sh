@@ -16,7 +16,11 @@ apt install arc-theme \
   libgtkglext1 \
   tcsh \
   python-qwt5-qt4 \
-  gnome-tweaks gnome-shell-extensions
+  gnome-tweaks gnome-shell-extensions \
+  moka-icon-theme \
+  numix-blue-gtk-theme numix-gtk-theme numix-icon-theme \
+  papirus-icon-theme
+
 
 
 
