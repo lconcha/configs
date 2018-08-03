@@ -6,7 +6,7 @@ apt install arc-theme \
   libeigen3-dev zlib1g-dev libqt4-opengl-dev libgl1-mesa-dev \
   libfftw3-dev libtiff5-dev \
   libqt5opengl5 libqt5opengl5-dev \
-  libcanberra-gtk3-module \
+  libcanberra-gtk3-module libcanberra-gtk-module \
   chromium-browser chrome-gnome-shell \
   x2goclient sshfs \
   inkscape keepassx \
@@ -14,7 +14,9 @@ apt install arc-theme \
   r-base \
   libmng-dev \
   libgtkglext1 \
-  tcsh
+  tcsh \
+  python-qwt5-qt4
+
 
 
 # rstudio
@@ -22,6 +24,9 @@ apt install arc-theme \
 wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
 gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
 ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
+wget --progress=bar --directory-prefix=/tmp http://mirrors.kernel.org/ubuntu/pool/main/libx/libxp/libxp6_1.0.2-1ubuntu1_amd64.deb
+gdebi /tmp/libxp6_1.0.2-1ubuntu1_amd64.deb
+
 
 
 
