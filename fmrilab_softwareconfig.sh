@@ -15,7 +15,8 @@ apt install arc-theme \
   libmng-dev \
   libgtkglext1 \
   tcsh \
-  python-qwt5-qt4
+  python-qwt5-qt4 \
+  gnome-tweaks gnome-shell-extensions
 
 
 
