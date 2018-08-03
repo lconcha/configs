@@ -19,7 +19,12 @@ apt install arc-theme \
   gnome-tweaks gnome-shell-extensions \
   moka-icon-theme \
   numix-blue-gtk-theme numix-gtk-theme numix-icon-theme \
-  papirus-icon-theme
+  papirus-icon-theme \
+  cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session
+
+#update-alternatives --config gdm3.css
+
+
 
 
 
