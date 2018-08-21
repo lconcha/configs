@@ -30,12 +30,12 @@ copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 fourier -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
+fourier3 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier3
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
-#mendel -rw,soft,intr,rsize=8192,wsize=8192 mendel:/datos/mendel
 mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
@@ -43,11 +43,8 @@ rabi    -rw,soft,intr,rsize=8192,wsize=8192 rabi:/datos/rabi
 torrey -rw,soft,intr,rsize=8192,wsize=8192 torrey:/datos/torrey
 ernst -rw,soft,intr,rsize=8192,wsize=8192 ernst:/datos/ernst
 rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
-#sesamo -rw,soft,intr,rsize=8192,wsize=8192 sesamo:/volume1/fmrilab
-#sesamo8 -rw,soft,intr,rsize=8192,wsize=8192 sesamo8:/volume1/bruker
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
-#stejskal -rw,soft,intr,rsize=8192,wsize=8192 stejskal:/datos/stekskal
 talairach -rw,soft,intr,rsize=8192,wsize=8192 talairach:/datos/talairach
 tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
