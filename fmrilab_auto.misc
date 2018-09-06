@@ -50,3 +50,5 @@ tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 bruker -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
+
+sesamo -ro,soft	sesamo:/volume1/fmrilab/backup
