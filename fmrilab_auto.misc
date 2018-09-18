@@ -47,6 +47,7 @@ sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 talairach -rw,soft,intr,rsize=8192,wsize=8192 talairach:/datos/talairach
 tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
+tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 bruker -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
