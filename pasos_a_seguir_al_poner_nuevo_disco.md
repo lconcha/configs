@@ -6,7 +6,7 @@
 3. Editar `/etc/fstab` y agregar mediante la UUID el disco, apuntando hacia `/datos/HOSTNAME?` donde `?` es el número de disco que estamos poniendo.
 
 4. Montar el disco
- * mount /datos/HOSTNAME?
+ * `mount /datos/HOSTNAME?`
 
 5. Arreglar permisos.
  * `chgrp fmriuser /datos/HOSTNAME?`
