@@ -23,3 +23,6 @@ Copiar el UUID de la partición.
 
 9. En el resto de las máquinas ejecutar como root `./fmrilab_fix_misc.sh`
 
+10. En sesamo agregar nuevo destino de backups. 
+Entrar como `admin` a `sesamo` e ir a carpeta `/volume1/fmrilab/backup`.
+Editar archivo `listOfDestinations=/volume1/fmrilab/backup/datos_backup_locations.txt`
