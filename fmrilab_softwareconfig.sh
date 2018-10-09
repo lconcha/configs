@@ -18,6 +18,7 @@ apt install arc-theme \
   python-qwt5-qt4 \
   gnome-tweaks gnome-shell-extensions \
   moka-icon-theme \
+  libssl-dev \
   numix-blue-gtk-theme numix-gtk-theme numix-icon-theme \
   papirus-icon-theme \
   tilix shutter \
