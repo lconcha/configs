@@ -11,7 +11,6 @@ apt install arc-theme \
   x2goclient sshfs \
   inkscape keepassx \
   gdebi-core htop tree curl \
-  r-base \
   libmng-dev \
   libgtkglext1 \
   tcsh \
@@ -32,7 +31,11 @@ apt install arc-theme \
 
 
 # rstudio
-#apt install r-base
+# First we install a PPA for the latest version of R, which is more modern than that in the ubuntu repos
+add-apt-repository ppa:marutter/rrutter
+apt-get update
+apt install r-base r-base-dev
+# and now we install rstudio
 wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
 gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
 ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
