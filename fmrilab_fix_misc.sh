@@ -23,5 +23,5 @@ echo "Habilitando cache para NFS y teoricamente para autofs"
 apt install cachefilesd 
 sed -i 's/#RUN=yes/RUN=yes/' /etc/default/cachefilesd
 
-service chachefilesd start
+service cachefilesd restart
 service autofs restart
