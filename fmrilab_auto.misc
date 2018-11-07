@@ -1,8 +1,7 @@
 # This auto.misc file comes from a central location
 # created by Leopoldo and lconcha 
 # master file is /home/inb/lconcha/fmrilab_auto.misc
-#
-# This is an automounter map and it has the following format
+## This is an automounter map and it has the following format
 # key [ -mount-options-separated-by-comma ] location
 # Details may be found in the autofs(5) manpage
 
@@ -22,6 +21,7 @@ arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
 cannabis -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
+cannabis2 -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
 charcot -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
@@ -49,7 +49,7 @@ talairach -rw,soft,intr,rsize=8192,wsize=8192 talairach:/datos/talairach
 tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
-tournoux2 -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
+tournoux2 -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 bruker -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
 
