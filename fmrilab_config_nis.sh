@@ -43,6 +43,11 @@ sed -i 's/^IPAddressDeny=any/#IPAddressDeny=any/' /lib/systemd/system/systemd-lo
 # la linea debe ir comentada, siguiendo instrucciones de 
 # https://askubuntu.com/questions/1031022/using-nis-client-in-ubuntu-18-04-crashes-both-gnome-and-unity
 
+# al parecer instalar nscd tambien ayuda a quitar el problema de systemd
+# https://www.bountysource.com/issues/50217346-systemd-logind-s-ip-sandbox-breaks-nss-nis-and-suchlike
+apt install nscd
+
+
 systemctl daemon-reload
 systemctl restart systemd-logind.service
 service nis restart
