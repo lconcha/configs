@@ -60,3 +60,13 @@ ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
 # para freesurfer 5.3
 # apt install tcsh
+
+
+# rclone
+rclonedeb=rclone-v1.45-linux-amd64.deb
+if [ -f $rclonedeb ]
+then
+  gdebi --n $rclonedeb
+else
+  echo "Did not find .deb for rclone: $rclonedeb"
+fi
