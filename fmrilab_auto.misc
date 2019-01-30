@@ -34,7 +34,6 @@ fourier3 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier3
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
-lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
