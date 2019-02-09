@@ -40,6 +40,8 @@ cat ./fmrilab_profile >> /etc/profile
 echo "Editando /lib/systemd/system/systemd-logind.service "
 
 sed -i 's/^IPAddressDeny=any/#IPAddressDeny=any/' /lib/systemd/system/systemd-logind.service
+chmod -w /lib/systemd/system/systemd-logind.service
+chmod o-r /lib/systemd/system/systemd-logind.service
 # la linea debe ir comentada, siguiendo instrucciones de 
 # https://askubuntu.com/questions/1031022/using-nis-client-in-ubuntu-18-04-crashes-both-gnome-and-unity
 
