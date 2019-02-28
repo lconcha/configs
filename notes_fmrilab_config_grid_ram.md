@@ -19,8 +19,6 @@ and change the `consumable` to `YES`
 
 
 # Congifure each node's free_mem
-NOT SURE IF NEEDED
-
 For each exec node, do:
 ```
 MEMFREE=`qhost -F mem_total -h $1|tail -n 1|cut -d: -f3|sed -e 
