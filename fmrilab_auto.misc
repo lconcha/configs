@@ -53,3 +53,4 @@ drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 bruker -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
 
 sesamo -ro,soft	sesamo:/volume1/fmrilab/backup
+sesamo8 -ro,soft sesamo8:/volume1/bruker
