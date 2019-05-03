@@ -4,3 +4,6 @@ Archivos de configuración e [instrucciones](https://github.com/lconcha/configs/
 
 Utiliza Ubuntu 18.04.
  
+
+[Aquí los pasos para poner un nuevo disco duro](
+Archivos de configuración e [instrucciones](https://github.com/lconcha/configs/blob/master/pasos_a_seguir_al_poner_nuevo_disco.md)
