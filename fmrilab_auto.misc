@@ -21,17 +21,19 @@ arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
 cannabis -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
-cannabis2 -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
-charcot -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
+charcot   -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
+charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
+evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
 fourier -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
 fourier3 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier3
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
+giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
 hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
@@ -49,8 +51,11 @@ tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
 #tournoux2 -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
+
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
-bruker -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
+
+bruker_pvDatasets2 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
+bruker_pvDatasets3 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets3
 
 sesamo -ro,soft	sesamo:/volume1/fmrilab/backup
 sesamo8 -ro,soft sesamo8:/volume1/bruker

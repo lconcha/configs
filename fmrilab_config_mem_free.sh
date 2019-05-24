@@ -24,9 +24,14 @@ do
   echo "[INFO] command is: $cmd"
   $cmd
 
-  cmd="qconf -mattr exechost complex_values h_vmem=${gb_free}G $h"
+#  cmd="qconf -mattr exechost complex_values h_vmem=${gb_free}G $h"
+#  echo "[INFO] command is: $cmd"
+#  $cmd
+
+  cmd="qconf -dattr exechost complex_values h_vmem $h"
   echo "[INFO] command is: $cmd"
   $cmd
+
 
   echo ""
 done
