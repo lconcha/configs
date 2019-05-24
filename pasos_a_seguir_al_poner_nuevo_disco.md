@@ -18,9 +18,9 @@
 7. Reiniciar servidor NFS en HOST
  * `service nfs-kernel-server restart`
 
-8. Editar el archivo maestro de fmrilab_auto.misc y agregar la nueva línea.
+8. Editar el archivo maestro de `/home/inb/soporte/configs/fmrilab_auto.misc` y agregar la nueva línea.
 
-9. En el resto de las máquinas ejecutar como root `./fmrilab_fix_misc.sh`
+9. En el resto de las máquinas ejecutar como root `/home/inb/soporte/configs/fmrilab_fix_misc.sh`
 
 10. En sesamo agregar nuevo destino de backups. 
  * Entrar como `admin` a `sesamo` e ir a carpeta `/volume1/fmrilab/backup`.
