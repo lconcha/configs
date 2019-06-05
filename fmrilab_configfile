@@ -12,20 +12,34 @@ fi
 logo=/home/inb/lconcha/fmrilab_software/fmrilab_logo.txt
 cat $logo
 
-# Configuramos fsl (version 4 es el default, para usar la 5 ver abajo)
-export FSLDIR=/home/inb/lconcha/fmrilab_software/fsl_4.1.9
+# nos aseguramos que tenemos SGE_ROOT para poder usar gridengine
+# (si no existe, fsl_sub no usa gridengine)
+if [ -d /var/lib/gridengine ]
+then
+ export SGE_ROOT=/var/lib/gridengine
+else
+  echo " [AGUAS] gridengine mal configurado, no existe /var/lib/gridengine"
+fi
+
+
+
+# Configuramos fsl (version 5 es el default)
+export FSLDIR=/home/inb/lconcha/fmrilab_software/fsl_5.0.6
 . ${FSLDIR}/etc/fslconf/fsl.sh
 export FSLPARALLEL=1
+echo " FSLDIR is $FSLDIR"
 # force fslview to use version 4
-alias fslview=/usr/bin/fslview
-export FSL4_SETUP_FILE=/home/inb/lconcha/fmrilab_software/tools/setup_fsl4
-alias fsl4="source $FSL4_SETUP_FILE"
+#alias fslview=/usr/bin/fslview
+#export FSL4_SETUP_FILE=/home/inb/lconcha/fmrilab_software/tools/setup_fsl4
+#alias fsl4="source $FSL4_SETUP_FILE"
 
 ## Si queremos fsl version 5 tenemos que invocarlo manualmente, preparemos un alias.
 export FSL5_SETUP_FILE=/home/inb/lconcha/fmrilab_software/tools/setup_fsl5
 export FSL509_SETUP_FILE=/home/inb/lconcha/fmrilab_software/tools/setup_fsl509
 alias fsl5="source $FSL5_SETUP_FILE"
 alias fsl509="source $FSL509_SETUP_FILE"
+alias fsl511='source /home/inb/lconcha/fmrilab_software/tools/setup_fsl511'
+
 
 # Configuramos freesurfer
 FS_FREESURFERENV_NO_OUTPUT=1
@@ -102,7 +116,7 @@ alias matlab08=/home/inb/lconcha/fmrilab_software/myMatlab/bin/matlab
 alias matlab11=/usr/local/MATLAB/R2011b/bin/matlab
 alias matlab13alt=/home/inb/lconcha/fmrilab_software/tools/fmrilab_matlab.sh
 alias matlab16alt=/home/inb/lconcha/fmrilab_software/tools/fmrilab_matlab16.sh
-
+alias matlab18alt=/home/inb/soporte/fmrilab_software/MatlabR2018a/bin/matlab
 
 # Paraview
 #export PATH=${PATH}:/home/inb/lconcha/fmrilab_software/ParaView-4.1.0-Linux-64bit/bin
@@ -118,18 +132,6 @@ export PATH=${PATH}:/home/inb/lconcha/fmrilab_software/mricrogl_lx
 alias scpresume="rsync -avz --partial --progress --rsh=ssh"
 alias slicer=/home/inb/lconcha/fmrilab_software/Slicer-4.2.2-1-linux-amd64/./Slicer
 alias itksnap=/home/inb/lconcha/fmrilab_software/itksnap-3.2.0-20141023-Linux-x86_64/bin/itksnap
-
-# Avisos
-echo "Hola `whoami`. Bienvenido a `uname -n`."
-echo "Para cambiar el password, contacta al administrador del sistema"
-echo "Recuerda que para permitir el acceso a tus datos es necesario"
-echo "que estos esten disponibles en la carpeta /misc/ y el nombre"
-echo "de la maquina que te corresponde"
-echo ""
-echo "Recuerda que los defaults son fsl4, mrtrix2 y freesurfer5.3"
-echo "Para mas información visita el wiki"
-printf '\e[1;31m%-6s\e[m' "http://172.24.80.100/dokuwiki/"
-echo -e "\n"
 
 
 # Una bandera para avisar que este archivo ya corrio
@@ -171,3 +173,22 @@ export PATH=${ANTSPATH}:$PATH
 export PATH="$PATH:/opt/OpenMPI/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/OpenMPI/lib"
 export MPI_ROOT="/opt/OpenMPI"
+
+## minc tools
+mincpath=/home/inb/lconcha/fmrilab_software/minc
+export PATH=${mincpath}/bin:${PATH}
+
+
+# Avisos
+echo "Hola `whoami`. Bienvenido a `uname -n`."
+echo "Para cambiar el password, contacta al administrador del sistema"
+echo "Recuerda que para permitir el acceso a tus datos es necesario"
+echo "que estos esten disponibles en la carpeta /misc/ y el nombre"
+echo "de la maquina que te corresponde"
+echo ""
+#echo "Recuerda que los defaults son fsl4, mrtrix2 y freesurfer5.3"
+echo "Para mas información visita la wiki"
+printf '\e[1;31m%-6s\e[m' "https://c13inb.github.io/"
+echo ""
+echolor bold "Revisa periódicamente tus respaldos. Aprende cómo hacerlo en la wiki."
+echo -e "\n"
