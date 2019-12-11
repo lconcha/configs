@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install rpcbind nfs-common autofs
+#apt install rpcbind nfs-common autofs
 
 
 
@@ -20,7 +20,7 @@ cp -v $fmrilab_home /etc/auto.home
 
 
 echo "Habilitando cache para NFS y teoricamente para autofs"
-apt install cachefilesd 
+#apt install cachefilesd 
 sed -i 's/#RUN=yes/RUN=yes/' /etc/default/cachefilesd
 
 service cachefilesd restart

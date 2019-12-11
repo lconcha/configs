@@ -20,13 +20,15 @@ pruebas -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/pruebas
 arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
-cannabis -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
+cannabis  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
+cannabis2 -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
 charcot   -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
 charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
+euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
 fourier -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
@@ -41,21 +43,24 @@ mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
 rabi    -rw,soft,intr,rsize=8192,wsize=8192 rabi:/datos/rabi
+ridelim -rw,soft,intr,rsize=8192,wsize=8192 ridelim:/datos/ridelim
 torrey -rw,soft,intr,rsize=8192,wsize=8192 torrey:/datos/torrey
 ernst -rw,soft,intr,rsize=8192,wsize=8192 ernst:/datos/ernst
 rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 talairach -rw,soft,intr,rsize=8192,wsize=8192 talairach:/datos/talairach
-tanner -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
+tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
-tournoux -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
-#tournoux2 -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
+tezca   -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca
+tezca2   -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca2
+tournoux  -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
+tournoux2 -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
 
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 
 bruker_pvDatasets2 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
 bruker_pvDatasets3 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets3
 
-sesamo -ro,soft	sesamo:/volume1/fmrilab/backup
+sesamo -ro,soft	sesamo:/volume1/fmrilab
 sesamo8 -ro,soft sesamo8:/volume1/bruker

@@ -10,6 +10,8 @@
 172.24.80.76    bongo.inb.unam.mx       bongo
 172.24.80.77    arwen.inb.unam.mx       arwen
 172.24.80.79    charcot.inb.unam.mx     charcot
+172.24.80.81    euler.inb.unam.mx       euler
+172.24.80.83    drobo01.inb.unam.mx     drobo01
 172.24.80.84    drobo02.inb.unam.mx     drobo02
 172.24.80.89    temporal.inb.unam.mx    temporal
 172.24.80.90    tournoux.inb.unam.mx    tournoux
@@ -19,7 +21,7 @@
 172.24.80.100   talairach.inb.unam.mx   talairach
 172.24.80.101   tanner.inb.unam.mx      tanner
 172.24.80.102   tesla.inb.unam.mx       tesla
-172.24.80.103   drobo01.inb.unam.mx     drobo01
+172.24.80.103   tezca.inb.unam.mx       tezca
 172.24.80.104   sesamo.inb.unam.mx      sesamo
 172.24.80.105   rhesus.inb.unam.mx      rhesus
 172.24.80.106   mansfield.inb.unam.mx   mansfield
@@ -35,6 +37,7 @@
 172.24.100.49   copula2.inb.unam.mx     copula2
 172.24.100.73   giora.inb.unam.mx       giora
 172.24.100.74   austin.inb.unam.mx      austin
+172.24.100.115  ridelim.inb.unam.mx     ridelim
 172.24.140.49   sesamo8.inb.unam.mx     sesamo8
 192.168.192.154 lauterbur.inb.unam.mx   lauterbur
 172.24.140.48 bruker_console
