@@ -21,7 +21,8 @@ apt install arc-theme \
   numix-blue-gtk-theme numix-gtk-theme numix-icon-theme \
   papirus-icon-theme \
   tilix shutter \
-  cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session
+  cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session \
+  parallel
 
 #update-alternatives --config gdm3.css
 
@@ -70,3 +71,9 @@ then
 else
   echo "Did not find .deb for rclone: $rclonedeb"
 fi
+
+# atom
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
+sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+apt-get update
+apt install atom
