@@ -247,7 +247,8 @@ Al final, debe haber dos archivos nuevo llamado `prueba.o?????` y `prueba.e?????
 **Ojo:**  El archivo de configuración que corre cada vez que se inicia una sesión, `$FMRILAB_CONFIGFILE` declara el valor de `SGE_ROOT`que, sin él, `fsl_sub` asume (incorrrectamente) que no hay un cluster SGE. El valor correcto de `SGE_ROOT` es `/var/lib/gridengine`. Este paso no debe hacerse al configurar una máquina, porque en cada sesión se va a declarar esta variable de entorno.
 
 
-
+## Singularity
+Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que hace es una carpeta en /opt para que ahí quede el localstatedir (ver [aquí](https://singularity.lbl.gov/admin-guide) para más info).
 
 
 
