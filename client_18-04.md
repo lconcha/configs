@@ -253,3 +253,5 @@ Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que ha
 
 
 
+## Ganglia monitor
+Hay que correr el script `fmrilab_config_ganglia_client.sh`. Este script instala y configura ganglia de acuerdo a [estas instrucciones](HOWTO-ganglia.md) (ahí está también cómo instalarlo en el servidor `tesla`). A veces se tarda unos minutos en que aparezca en la web interface (en [http://172.24.80.102/ganglia](http://172.24.80.102/ganglia)), y en ocasiones es necesario apagar y volver a prender el servicio en el cliente usando `systemctl restart ganglia-monitor`.
