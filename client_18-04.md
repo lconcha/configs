@@ -136,7 +136,7 @@ Preguntará por un dominio, el cual es `fmrilab`
 
 **Ojo3:** Dado que `/home` de la máquina ha sido *cubierto* por `/home` indicado por `autofs`, el HOME del primer usuario de la máquina se va a desaparecer (no borrar, pero inaccesible porque hay una capa de autofs sobre /home).  Además, el UID del primero usuario normalmente es 1000, que colisiona con el UID del usuario `lconcha`en el servidor NIS, por lo que si alguna vez de usa el usuario soporte_HOSTNAME, es posible que pida el password de lconcha, lo cual está mal. Para evitar problemas, el script de arriba va a cambiar el home del primer usuario a una carpeta adentro de `/localhome`  , y va a cambiar el UID del primer usuario (soporte_HOSTNAME) a 5000. Podemos asegurarnos que este paso corrió, utilizando `id soporte_HOSTNAME`, y veremos que UID=5000.
 
-**Ojo4:** Tengo grabado en el google drive los archivos passwd y shadow, por si es necesario modificar el servidor
+**Ojo4:** Tengo grabado en el google drive los archivos passwd y shadow, por si es necesario modificar el servidor. El archivo se llama baks_tesla.tar.gz
 
 
 
