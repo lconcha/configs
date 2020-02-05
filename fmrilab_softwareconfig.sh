@@ -22,7 +22,8 @@ apt install arc-theme \
   papirus-icon-theme \
   tilix shutter \
   cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session \
-  parallel
+  parallel \
+  dia
 
 #update-alternatives --config gdm3.css
 
@@ -77,3 +78,13 @@ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
 sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 apt-get update
 apt install atom
+
+# visual studio
+deb=code_1.41.1-1576681836_amd64.deb
+if [ -f $deb ]
+then
+  gdebi --n $deb
+else
+  echo "Did not find .deb for visual studio code: $deb"
+fi
+
