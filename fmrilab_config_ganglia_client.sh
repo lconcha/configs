@@ -9,5 +9,5 @@ cp -v fmrilab_gmond.conf /etc/ganglia/gmond.conf
 
 echo "Starting ganglia monitor"
 systemctl start ganglia-monitor
-systemctl status ganglia-monitor
+#systemctl status ganglia-monitor
 
