@@ -120,6 +120,20 @@ sudo apt install ganglia-monitor
 
 Edit `/etc/ganglia/gmond.conf`
 ```
+globals {
+  daemonize = yes
+  setuid = yes
+  user = ganglia
+  debug_level = 0
+  max_udp_msg_len = 1472
+  mute = no
+  deaf = yes # this is important to reduce CPU usage
+  host_dmax = 0 /*secs */
+  cleanup_threshold = 300 /*secs */
+  gexec = no
+  send_metadata_interval = 0
+}
+
 /* If a cluster attribute is specified, then all gmond hosts are wrapped inside
  * of a <CLUSTER> tag.  If you do not specify a cluster tag, then all <HOSTS> will
  * NOT be wrapped inside of a <CLUSTER> tag. */
