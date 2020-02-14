@@ -23,7 +23,7 @@ apt install arc-theme \
   tilix shutter \
   cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session \
   parallel \
-  dia bat
+  dia
 
 #update-alternatives --config gdm3.css
 
