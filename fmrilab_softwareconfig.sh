@@ -8,7 +8,7 @@ apt install arc-theme \
   libqt5opengl5 libqt5opengl5-dev \
   libcanberra-gtk3-module libcanberra-gtk-module \
   chromium-browser chrome-gnome-shell \
-  x2goclient sshfs \
+  x2goclient x2goserver sshfs \
   inkscape keepassx \
   gdebi-core htop tree curl \
   libmng-dev \
