@@ -8,5 +8,5 @@
 
 
 
-inb	-rw,fsc,soft,intr,rsize=8192,wsize=8192 tesla:/home/inb
+inb	-rw,fsc,sync,soft,intr,proto=tcp,rsize=8192,wsize=8192 tesla:/home/inb
 

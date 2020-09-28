@@ -27,4 +27,4 @@
 #
 +auto.master
 /misc   /etc/auto.misc --timeout 600 --ghost
-/home	/etc/auto.home --timeout 600 --ghost
+#/home	/etc/auto.home --timeout 600 --ghost

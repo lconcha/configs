@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#apt install rpcbind nfs-common autofs
+apt install rpcbind nfs-common autofs
 
 
 
@@ -14,7 +14,7 @@ tmpMisc=/tmp/tmpMisc_$$
 cp -v /etc/auto.misc /etc/auto.misc.bak
 cp -v $fmrilab_misc /etc/auto.misc
 cp -v $fmrilab_master /etc/auto.master
-cp -v $fmrilab_home /etc/auto.home
+#cp -v $fmrilab_home /etc/auto.home
 
 
 
