@@ -24,4 +24,4 @@ echo "Habilitando cache para NFS y teoricamente para autofs"
 sed -i 's/#RUN=yes/RUN=yes/' /etc/default/cachefilesd
 
 service cachefilesd restart
-service autofs restart
+service autofs reload
