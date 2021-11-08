@@ -100,11 +100,15 @@ update-grub
 # NFS y autofs
 Para que más adelante veamos `/home/inb`es importante que primero pongamos el NFS. 
 
-*El  `/home/inb` queda en  fstab como NVSv4* Esto se configura con el script
+
+
+*El  `/home/inb` queda en  fstab como NVSv4* Esto se configura:
 ```
+mkdir /home/inb
 ./fmrilab_fix_fstab.sh
 ```
 
+** Si la maquina no está aún configurada en el servidor `tesla`, debemos agregarla ahí usando el script `fmrilab_fix_hosts_file.sh` y agregarla por nombre a `/etc/netgroup`
 
 Corremos un script para ello:
 ```
