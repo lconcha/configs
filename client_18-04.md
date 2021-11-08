@@ -98,7 +98,13 @@ update-grub
 
 
 # NFS y autofs
-Para que más adelante veamos `/home/inb`es importante que primero pongamos el NFS. *Antes poníamos `/home/inb` a través del fstab, pero resulta en muchos problemas de timeout que se van si utilizamos los homes a través de autofs* 
+Para que más adelante veamos `/home/inb`es importante que primero pongamos el NFS. 
+
+*El  `/home/inb` queda en  fstab como NVSv4* Esto se configura con el script
+```
+./fmrilab_fix_fstab.sh
+```
+
 
 Corremos un script para ello:
 ```
