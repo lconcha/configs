@@ -174,6 +174,7 @@ Y reiniciamos el servidor NFS
 /etc/init.d/nfs-kernel-server restart
 ```
 
+**OJO** Tendremos que declarar este export en todas las otras máquinas, lo que se hace fácilmente si editamos `fmrilab_auto.misc` y corremos en cada máquina los scripts `fmrilab_fix_hosts_file.sh` y `fmrilab_fix_misc.sh`
 
 
 
