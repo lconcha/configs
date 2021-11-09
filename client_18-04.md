@@ -98,7 +98,17 @@ update-grub
 
 
 # NFS y autofs
-Para que más adelante veamos `/home/inb`es importante que primero pongamos el NFS. *Antes poníamos `/home/inb` a través del fstab, pero resulta en muchos problemas de timeout que se van si utilizamos los homes a través de autofs* 
+Para que más adelante veamos `/home/inb`es importante que primero pongamos el NFS. 
+
+
+
+*El  `/home/inb` queda en  fstab como NVSv4* Esto se configura:
+```
+mkdir /home/inb
+./fmrilab_fix_fstab.sh
+```
+
+** Si la maquina no está aún configurada en el servidor `tesla`, debemos agregarla ahí usando el script `fmrilab_fix_hosts_file.sh` y agregarla por nombre a `/etc/netgroup`
 
 Corremos un script para ello:
 ```
@@ -164,6 +174,7 @@ Y reiniciamos el servidor NFS
 /etc/init.d/nfs-kernel-server restart
 ```
 
+**OJO** Tendremos que declarar este export en todas las otras máquinas, lo que se hace fácilmente si editamos `fmrilab_auto.misc` y corremos en cada máquina los scripts `fmrilab_fix_hosts_file.sh` y `fmrilab_fix_misc.sh`
 
 
 
