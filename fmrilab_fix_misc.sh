@@ -3,10 +3,27 @@
 apt install rpcbind nfs-common autofs
 
 
+masterFilesDir=/home/inb/soporte/configs
 
-fmrilab_misc=./fmrilab_auto.misc
-fmrilab_home=./fmrilab_auto.home
-fmrilab_master=./auto.master
+fmrilab_misc=${masterFilesDir}/fmrilab_auto.misc
+fmrilab_home=${masterFilesDir}/fmrilab_auto.home
+fmrilab_master=${masterFilesDir}/auto.master
+
+isOK=1
+for f in $fmrilab_misc $fmrilab_home $fmrilab_master
+do
+  if [ ! -f $f ]
+  then
+   isOK=0
+   echo "ERROR   Cannot find $f"
+  fi
+done
+
+if [ $isOK -eq 0 ]
+then
+  echo "ERRORS were found. Quitting."
+  exit 2
+fi
 
 tmpMisc=/tmp/tmpMisc_$$
 
