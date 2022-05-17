@@ -24,7 +24,9 @@ apt install arc-theme \
   cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session \
   parallel \
   dia \
-  xvfb
+  xvfb \
+  apcupsd \
+  curl
 
 #update-alternatives --config gdm3.css
 
@@ -36,17 +38,17 @@ apt install arc-theme \
 # rstudio
 echo "[installing rstudio]"
 # First we install a PPA for the latest version of R, which is more modern than that in the ubuntu repos
-add-apt-repository ppa:marutter/rrutter
+add-apt-repository -y ppa:marutter/rrutter
 apt-get update
 apt install r-base r-base-dev
 # and now we install rstudio
 #wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
 wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb
 #gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
-gdebi /tmp/rstudio-2021.09.1-372-amd64.deb
+gdebi --n /tmp/rstudio-2021.09.1-372-amd64.deb
 ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
 wget --progress=bar --directory-prefix=/tmp http://mirrors.kernel.org/ubuntu/pool/main/libx/libxp/libxp6_1.0.2-1ubuntu1_amd64.deb
-gdebi /tmp/libxp6_1.0.2-1ubuntu1_amd64.deb
+gdebi --n /tmp/libxp6_1.0.2-1ubuntu1_amd64.deb
 
 
 
