@@ -43,9 +43,13 @@ apt-get update
 apt install r-base r-base-dev
 # and now we install rstudio
 #wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
-wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb
+#wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb
 #gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
-gdebi --n /tmp/rstudio-2021.09.1-372-amd64.deb
+URL="$(curl -s "https://www.rstudio.com/products/rstudio/download/" | grep "amd64.deb" | grep -v "tar.gz" | head -n1 | cut -d'"' -f2)"
+#gdebi --n /tmp/rstudio-2021.09.1-372-amd64.deb
+wget --progress=bar -O /tmp/rstudio.deb $URL
+gdebi /tmp/rstudio.deb
+rm /tmp/rstudio.deb
 ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
 wget --progress=bar --directory-prefix=/tmp http://mirrors.kernel.org/ubuntu/pool/main/libx/libxp/libxp6_1.0.2-1ubuntu1_amd64.deb
 gdebi --n /tmp/libxp6_1.0.2-1ubuntu1_amd64.deb
