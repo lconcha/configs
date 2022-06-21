@@ -38,7 +38,9 @@ apt install arc-theme \
 # rstudio
 echo "[installing rstudio]"
 # First we install a PPA for the latest version of R, which is more modern than that in the ubuntu repos
-add-apt-repository -y ppa:marutter/rrutter
+#add-apt-repository -y ppa:marutter/rrutter
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
 apt-get update
 apt install r-base r-base-dev
 # and now we install rstudio
