@@ -49,6 +49,12 @@ chmod o-r /lib/systemd/system/systemd-logind.service
 # https://www.bountysource.com/issues/50217346-systemd-logind-s-ip-sandbox-breaks-nss-nis-and-suchlike
 apt install nscd
 
+# cosas nuevas para 22.04
+ypdomainname -y fmrilab
+echo fmrilab > /etc/defaultdomain
+update-rc.d ypbind enable
+service ypbind start
+service ypbind status
 
 systemctl daemon-reload
 systemctl restart systemd-logind.service
