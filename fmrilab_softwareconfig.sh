@@ -1,140 +1,102 @@
 #!/bin/bash
 
-# miscelaneos a instalar
-apt install arc-theme \
-  git g++ python-numpy \
-  libeigen3-dev zlib1g-dev libqt4-opengl-dev libgl1-mesa-dev \
-  libfftw3-dev libtiff5-dev \
-  libqt5opengl5 libqt5opengl5-dev \
-  libcanberra-gtk3-module libcanberra-gtk-module \
-  chromium-browser chrome-gnome-shell \
-  x2goclient x2goserver sshfs \
-  inkscape keepassx \
-  gdebi-core htop tree curl \
-  libmng-dev \
-  libgtkglext1 \
-  tcsh \
-  python-qwt5-qt4 \
-  gnome-tweaks gnome-shell-extensions \
-  moka-icon-theme \
-  libssl-dev curl libcurl4-openssl-dev \
-  numix-blue-gtk-theme numix-gtk-theme numix-icon-theme \
-  papirus-icon-theme \
-  tilix shutter \
-  cinnamon-desktop-environment plasma-desktop budgie-desktop lxde gnome-session \
-  parallel \
-  dia \
+# UBUNTU REPOSITORIES
+
+## miscelaneos a instalar
+apt install ssh sshfs \
+  wget \
+  htop \
+  byobu \
+  tree \
+  x2goclient x2goserver \
   xvfb \
+  parallel \
+  build-essential \
+  curl \
+  gdebi-core\
   apcupsd \
-  curl
-
-#update-alternatives --config gdm3.css
-
+  gnome-tweaks gnome-shell-extensions \
+  python-is-python3
 
 
+## Apps a instalar
+apt install tilix \
+  terminator \
+  shutter \
+  inkscape
+  
+apt autoremove
+  
+  
+  
+
+## Librerias para otros sofware (mrtrix, fsl, etc.)
+# MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
+
+
+# PPA SOFTWARE
+
+## Installing R base
+
+	# update indices
+	apt update -qq
+	# install two helper packages we need
+	apt install --no-install-recommends software-properties-common dirmngr
+	# add the signing key (by Michael Rutter) for these repos
+	# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
+	# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
+	wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+	# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
+	add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
+	apt install --no-install-recommends r-base r-base-dev
 
 
 
-# rstudio
-echo "[installing rstudio]"
-# First we install a PPA for the latest version of R, which is more modern than that in the ubuntu repos
-#add-apt-repository -y ppa:marutter/rrutter
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
-apt-get update
-apt install r-base r-base-dev
-# and now we install rstudio
-#wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
-#wget --progress=bar --directory-prefix=/tmp https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.1-372-amd64.deb
-#gdebi /tmp/rstudio-xenial-1.1.456-amd64.deb
-URL="$(curl -s "https://www.rstudio.com/products/rstudio/download/" | grep "amd64.deb" | grep -v "tar.gz" | head -n1 | cut -d'"' -f2)"
-#gdebi --n /tmp/rstudio-2021.09.1-372-amd64.deb
-wget --progress=bar -O /tmp/rstudio.deb $URL
-gdebi /tmp/rstudio.deb
-rm /tmp/rstudio.deb
-ln -s /usr/lib/rstudio/bin/libicui18n.so.55 /usr/lib/rstudio/bin/libicui18n.so.52
-wget --progress=bar --directory-prefix=/tmp http://mirrors.kernel.org/ubuntu/pool/main/libx/libxp/libxp6_1.0.2-1ubuntu1_amd64.deb
-gdebi --n /tmp/libxp6_1.0.2-1ubuntu1_amd64.deb
+
+## DEB-GET SOFTWARE
+
+#Install deb-get
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+
+#deb-get install rstudio \ Hay un big en deb-get para esto, revisar si ya fue resuleto
+
+deb-get install code \
+	rclone \
+	gitkraken \
+	zotero \
+	pandoc \
+	zoom \
+	google-chrome-stable \
+	brave-browser \
+	bitwarden keepassxc \
+	sejda-desktop \
+	rocketchat \
+	bat lsd duf fd
 
 
-
+# NEUROSTUFF SOFTWARE
 
 # para fsl 509
 # apt install libmng-dev
-ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
-ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
-f=`locate libpng12.so.0 | head -n 1`
-cp -v $f /usr/lib/x86_64-linux-gnu/
+#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
+#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
+#f=`locate libpng12.so.0 | head -n 1`
+#cp -v $f /usr/lib/x86_64-linux-gnu/
 
 
 # para mrtrix
 # apt install libgtkglext1
-f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
-ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
+#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
+#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
 # para freesurfer 5.3
 # apt install tcsh
 
 
-# rclone
-echo "[installing rclone]"
-wget --progress=bar --directory-prefix=/tmp https://downloads.rclone.org/rclone-current-linux-amd64.deb
-rclonedeb=/tmp/rclone-current-linux-amd64.deb
-if [ -f $rclonedeb ]
-then
-  gdebi --n $rclonedeb
-else
-  echo "Did not find .deb for rclone: $rclonedeb"
-fi
 
-# atom
-echo "[installing atom]"
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
-sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-apt-get update
-apt install atom
-
-# visual studio
-echo "[installing visualstudio code]"
-#deb=code_1.41.1-1576681836_amd64.deb
-#if [ -f $deb ]
-#then
-#  gdebi --n $deb
-#else
-#  echo "Did not find .deb for visual studio code: $deb"
-#fi
-
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
-apt install apt-transport-https
-apt update
-apt install code
-
-
-# google chrome
-echolor "[installing google chrome]"
-wget --progress=bar --directory-prefix=/tmp https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-deb=/tmp/google-chrome-stable_current_amd64.deb
-if [ -f $deb ]
-then
-  gdebi --n $deb
-else
-  echo "Did not find .deb for google-chrome: $deb"
-fi
-
-# zoom
-wget --progress=bar --directory-prefix=/tmp https://zoom.us/client/latest/zoom_amd64.deb
-deb=/tmp/zoom_amd64.deb
-if [ -f $deb ]
-then
-  gdebi --n $deb
-else
-  echo "Did not find .deb for zoom: $deb"
-fi
-
-
-
-
+# removing .deb in /tmp
 rm -f -v /tmp/*.deb
+
 echo "[finished installing software]"
