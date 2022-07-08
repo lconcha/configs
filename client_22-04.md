@@ -143,13 +143,6 @@ Corremos el script
 ```
 
 
-Antes preguntaba por un dominio, el cual es `fmrilab`, pero en 22.04 ya no pregunta, y no queda bien configurado. Debemos hacerlo manualmente:
-
-```
-cat fmrilab > /etc/defaultdomain
-update-rc.d ypbind enable
-reboot
-```
 
 **OJO** El password de `soporte`, al ser designado por el NIS, es el mismo de siempre.
 
