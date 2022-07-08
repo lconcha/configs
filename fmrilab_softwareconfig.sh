@@ -32,7 +32,7 @@ apt autoremove
 
 ## Librerias para otros sofware (mrtrix, fsl, etc.)
 # MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt-get install libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
+apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
 
 
 # PPA SOFTWARE
