@@ -70,7 +70,7 @@ deb-get install code \
 	zoom \
 	google-chrome-stable \
 	brave-browser \
-	bitwarden \
+	bitwarden keepassxc \
 	sejda-desktop \
 	rocketchat \
 	bat lsd duf fd
