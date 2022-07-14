@@ -89,7 +89,7 @@ apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-me
 
 ## Afni
 apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
-	# faltan apra el 22.04  libgfortran4 libgfortran-8-dev
+	# faltan para el 22.04  libgfortran4 libgfortran-8-dev
 #### link simbolico que afni requiere
 ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
 
