@@ -18,7 +18,7 @@ apt install ssh sshfs \
   apcupsd \
   gnome-tweaks gnome-shell-extensions \
   python-is-python3 python3-matplotlib python3-numpy \
-  xfonts xfonts-base xfonts-100dpi 
+  xfonts-base xfonts-100dpi 
 
 ## Apps a instalar
 apt install xterm tilix \
@@ -83,36 +83,40 @@ deb-get install code \
 
 # NEUROSTUFF SOFTWARE
 
-## Librerias requeridas
-### MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
-### Afni
-apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev
+## MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-mesa-dev libfftw3-dev libpng-dev
+	# en las instrucciones de mrtrix todos eran packetes -dev  
 
-## Pasos adicionales
-	# para fsl 509
-	# apt install libmng-dev
-	#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
-	#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
-	#f=`locate libpng12.so.0 | head -n 1`
-	#cp -v $f /usr/lib/x86_64-linux-gnu/
+## Afni
+apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
+	# faltan apra el 22.04  libgfortran4 libgfortran-8-dev
+#### link simbolico que afni requiere
+ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
 
 
-	# para mrtrix
-	# apt install libgtkglext1
-	#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
-	#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
-
-	# para freesurfer 5.3
-
-	# para afni
-	ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+# para fsl 509
+# apt install libmng-dev
+#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
+#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
+#f=`locate libpng12.so.0 | head -n 1`
+#cp -v $f /usr/lib/x86_64-linux-gnu/
 
 
+# para mrtrix (version anteior?)
+# apt install libgtkglext1
+#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
+#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
+
+# para freesurfer 5.3
 
 
 
-# removing .deb in /tmp
+
+
+
+# Terminando la instalacion
+
+## removing .deb in /tmp
 rm -f -v /tmp/*.deb
 
 echo "[finished installing software]"
