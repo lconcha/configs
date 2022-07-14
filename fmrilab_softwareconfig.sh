@@ -20,7 +20,6 @@ apt install ssh sshfs \
   python-is-python3 python3-matplotlib python3-numpy \
   xfonts xfonts-base xfonts-100dpi 
 
-
 ## Apps a instalar
 apt install xterm tilix \
   shutter \
@@ -32,15 +31,9 @@ apt install xterm tilix \
 	# terminator \ terminal padre pero se isntala por encima del default
 
 apt autoremove
-  
-  
-  
 
-## Librerias para otros sofware (mrtrix, fsl, etc.)
-### MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
-### Afni
-apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev
+
+
 
 # PPA SOFTWARE
 
@@ -58,6 +51,7 @@ apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 
 	add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 
 	apt install --no-install-recommends r-base r-base-dev
+
 
 
 
@@ -84,25 +78,38 @@ deb-get install code \
 	onlyoffice-desktopeditors
 
 
-# NEUROSTUFF SOFTWARE aditional steps
-
-# para fsl 509
-# apt install libmng-dev
-#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
-#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
-#f=`locate libpng12.so.0 | head -n 1`
-#cp -v $f /usr/lib/x86_64-linux-gnu/
 
 
-# para mrtrix
-# apt install libgtkglext1
-#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
-#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
-# para freesurfer 5.3
+# NEUROSTUFF SOFTWARE
 
-# para afni
-ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+## Librerias requeridas
+### MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
+### Afni
+apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev
+
+## Pasos adicionales
+	# para fsl 509
+	# apt install libmng-dev
+	#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
+	#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
+	#f=`locate libpng12.so.0 | head -n 1`
+	#cp -v $f /usr/lib/x86_64-linux-gnu/
+
+
+	# para mrtrix
+	# apt install libgtkglext1
+	#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
+	#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
+
+	# para freesurfer 5.3
+
+	# para afni
+	ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+
+
+
 
 
 # removing .deb in /tmp
