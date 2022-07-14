@@ -4,36 +4,43 @@
 
 ## miscelaneos a instalar
 apt install ssh sshfs \
+  git \
   wget \
   htop \
   byobu \
   tree \
-  x2goclient x2goserver \
   xvfb \
   parallel \
   build-essential \
+  cmake \
   curl \
   gdebi-core\
   apcupsd \
   gnome-tweaks gnome-shell-extensions \
-  python-is-python3
+  python-is-python3 python3-matplotlib python3-numpy \
+  xfonts xfonts-base xfonts-100dpi 
 
 
 ## Apps a instalar
-apt install tilix \
-  terminator \
+apt install xterm tilix \
   shutter \
-  inkscape
+  inkscape \
+  tcsh \
+  x2goclient x2goserver \
+  vim
   
+	# terminator \ terminal padre pero se isntala por encima del default
+
 apt autoremove
   
   
   
 
 ## Librerias para otros sofware (mrtrix, fsl, etc.)
-# MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+### MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
 apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
-
+### Afni
+apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev
 
 # PPA SOFTWARE
 
@@ -73,10 +80,11 @@ deb-get install code \
 	bitwarden keepassxc \
 	sejda-desktop \
 	rocketchat \
-	bat lsd duf fd
+	bat lsd duf fd \
+	onlyoffice-desktopeditors
 
 
-# NEUROSTUFF SOFTWARE
+# NEUROSTUFF SOFTWARE aditional steps
 
 # para fsl 509
 # apt install libmng-dev
@@ -92,8 +100,9 @@ deb-get install code \
 #ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
 # para freesurfer 5.3
-# apt install tcsh
 
+# para afni
+ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
 
 
 # removing .deb in /tmp
