@@ -3,15 +3,15 @@
 apt install nis portmap
 
 
-echo "Primero modificamos detalles de UID del primer usuario que es sudo"
-firstuser=`getent group sudo | cut -d: -f4`
-newUID=5000
-echo "  Cambiando de lugar el home del primer usuario ($firstuser) a /localhome/${firstuser}"
-mkdir -p /localhome/$firstuser
-usermod -d /localhome/$firstuser -m $firstuser
-newUID=5000
-echo "  Cambiando UID del usuario $firstuser a $newUID"
-usermod -u $newUID $firstuser
+#echo "Primero modificamos detalles de UID del primer usuario que es sudo"
+#firstuser=`getent group sudo | cut -d: -f4`
+#newUID=5000
+#echo "  Cambiando de lugar el home del primer usuario ($firstuser) a /localhome/${firstuser}"
+#mkdir -p /localhome/$firstuser
+#usermod -d /localhome/$firstuser -m $firstuser
+#newUID=5000
+#echo "  Cambiando UID del usuario $firstuser a $newUID"
+#usermod -u $newUID $firstuser
 
 
 echo "Editando archivos passwd, group y shadow"
@@ -49,6 +49,12 @@ chmod o-r /lib/systemd/system/systemd-logind.service
 # https://www.bountysource.com/issues/50217346-systemd-logind-s-ip-sandbox-breaks-nss-nis-and-suchlike
 apt install nscd
 
+# cosas nuevas para 22.04
+ypdomainname -y fmrilab
+echo fmrilab > /etc/defaultdomain
+update-rc.d ypbind enable
+service ypbind start
+service ypbind status
 
 systemctl daemon-reload
 systemctl restart systemd-logind.service

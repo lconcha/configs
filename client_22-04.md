@@ -14,7 +14,7 @@ Iniciamos con una PC con dos discos duros, uno chico (120GB) y uno grande (>750G
 Cuando pregunta dónde instalar ubuntu, le decimos "something else" y ajustamos nuestras particiones de acuerdo a:
 ```
 /dev/sdb1	efi				536MB
-/dev/sdb2	ext4	/		40GB (esta particion siempre asi)
+/dev/sdb2	ext4	/		60 a 120 GB (min 60 en caso de un solo disco chico, max 120 para SSDs grandes)
 /dev/sdb3 	ext4	/tmp	75GB (esta puede cambiar, ser mas grande; es lo que sobre del disco)
 /dev/sdb4   swap			15GB (esta siempre asi)
 /dev/sda1	ext4	/datos	750GB
@@ -24,7 +24,7 @@ El bootloader queda en `sdb` (o equivalente en cada máquina) porque es el SSD e
 
 La particion en   `/tmp` debe ser suficientemente grande, digamos 75GB. Si no, ponerla en el otro disco. Esta partición es importante porque muchos trabajos del tipo de $fsl$ y $mrtrix$ ocupan muchos datos temporales que quedan en `/tmp` y,  si son muchos, puede llenar completamente el disco duro si la partición `/`y `/tmp` comparten la misma unidad física.
 
-El nombre del primer usuario es `soporte_$hostname` y el password sigue la nomenclatura conocida. En caso de que solo contemos con un disco duro, entonces debe haber particiones distintas para `/` **(40GB siempre)**, `/tmp`, `/datos`(si es necesario) y swap.
+El nombre del primer usuario es `soporte_$hostname` y el password sigue la nomenclatura conocida. En caso de que solo contemos con un disco duro, entonces debe haber particiones distintas para `/` **(~70GB)**, `/tmp`, `/datos`(si es necesario) y swap.
 
 El nombre del primer usuario es `soporte_$hostname` y el password sigue la nomenclatura conocida.
 
@@ -53,19 +53,19 @@ Poner `apply` y luego apagar y prender el ethernet device.
 
 
 # Driver tarjeta de video
-Casi todas las computadoras tienen tarjeta Nvidia, pero también puede ser AMD/ATI o Intel. Para saber cuál es, podemos abrir la PC y ver la tarjeta, o desde una terminal:
-```
-lspci | grep VGA
-```
-Si regresa algo como `VGA compatible controller: NVIDIA Corporation`, entonces sí tenemos una Nvidia.
+Usemos el comando `ubuntu-drivers`. Con `-list`  nos muestra si hay algo que instalar. De ser el caso, usamos:
 
-Si regresa algo como `VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI]`,  en ese caso no se debe seguir este paso. Me falta saber cómo instalar la aceleración de AMD.
+```
+ubuntu-drivers install
+```
 
-La configuración para Nvidia (y supongo que para ATI también) es gráfica. Se agregan los **drivers de la *tarjeta de video*** a través de la interface gráfica que se consigue presionando la tecla Meta (la del ícono del Windows), y escribir `software` , abrimos el programa y vamos a la pestaña `additional drivers` Seleccionamos el correspondiente a la tarjeta de video (Algo así como `Nvidia binary driver (proprietary), versión 390`, o el número más alto que aparezca. No utilizar el driver `nouveau`. No lo sé aún, pero supongo que para ATI ha de ser igual.
 
 # Reboot
 Una vez que reinicie la máquina, nos saludará la interface gráfica llamada `gdm`, donde podemos escribir nuestro nombre de usuario. Para fines de configuración, no la vamos a utilizar, porque vamos a hacer login de texto con el usuario `root`. Para ello:
 **presionamos simultáneamente `Ctrl+Alt+F3` y hacemos login como root**.
+
+:warning: ** No olvidar hacer login como root! **
+
 
 # Hosts
 Tengo un script que ayuda a configurar los hosts.
@@ -132,19 +132,17 @@ agregar:
 soporte ALL=(ALL:ALL) ALL
 ```
 
+Modificamos el UID del primer usuario de esta PC, de lo contrario va a colisionar con el de lconcha en el servidor (UID=1000)
+```
+fmrilab_mod_uid_soporte_local.sh
+```
+
 Corremos el script
 ```
 ./fmrilab_config_nis.sh
 ```
 
 
-Antes preguntaba por un dominio, el cual es `fmrilab`, pero en 22.04 ya no pregunta, y no queda bien configurado. Debemos hacerlo manualmente:
-
-```
-cat fmrilab > /etc/defaultdomain
-update-rc.d ypbind enable
-reboot
-```
 
 **OJO** El password de `soporte`, al ser designado por el NIS, es el mismo de siempre.
 
