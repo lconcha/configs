@@ -16,7 +16,9 @@ apt install ssh sshfs \
   gdebi-core\
   apcupsd \
   gnome-tweaks gnome-shell-extensions \
-  python-is-python3
+  python-is-python3 \
+  git \
+  vlc
 
 
 ## Apps a instalar
@@ -24,15 +26,13 @@ apt install tilix \
   terminator \
   shutter \
   inkscape
-  
+
 apt autoremove
-  
-  
-  
+
 
 ## Librerias para otros sofware (mrtrix, fsl, etc.)
 # MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
+apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5
 
 
 # PPA SOFTWARE
@@ -73,7 +73,8 @@ deb-get install code \
 	bitwarden keepassxc \
 	sejda-desktop \
 	rocketchat \
-	bat lsd duf fd
+	bat lsd duf fd \
+	onlyoffice-desktopeditors
 
 
 # NEUROSTUFF SOFTWARE
