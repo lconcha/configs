@@ -4,35 +4,44 @@
 
 ## miscelaneos a instalar
 apt install ssh sshfs \
+  git \
   wget \
   htop \
   byobu \
   tree \
-  x2goclient x2goserver \
   xvfb \
   parallel \
   build-essential \
+  cmake \
   curl \
   gdebi-core\
   apcupsd \
   gnome-tweaks gnome-shell-extensions \
-  python-is-python3
-
+  python-is-python3 python3-matplotlib python3-numpy \
+  xfonts-base xfonts-100dpi \
+  python-is-python3 \
+  git \
+  vlc
 
 ## Apps a instalar
-apt install tilix \
-  terminator \
+apt install xterm tilix \
   shutter \
-  inkscape
+  inkscape \
+  tcsh \
+  x2goclient x2goserver \
+  vim
   
+	# terminator \ terminal padre pero se instala por encima del default
+
 apt autoremove
-  
-  
+
+### añadidos para mrtrix y afni: python-is-python3 python3-matplotlib python3-numpy 
+### añadidos para afni: tcsh, xfonts-base, xfonts-100dpi
   
 
 ## Librerias para otros sofware (mrtrix, fsl, etc.)
 # MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 libtiff5 libpng
+apt install zlib1g libqt5opengl5 libqt5svg5 libtiff5
 
 
 # PPA SOFTWARE
@@ -55,12 +64,13 @@ apt-get install libeigen3 zlib1g libqt5opengl5 libqt5svg5 libgl1-mesa libfftw3 l
 
 
 
+
 ## DEB-GET SOFTWARE
 
 #Install deb-get
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 
-#deb-get install rstudio \ Hay un big en deb-get para esto, revisar si ya fue resuleto
+#deb-get install rstudio \ Hay un bug en deb-get para esto, revisar si ya fue resuleto
 
 deb-get install code \
 	rclone \
@@ -73,10 +83,22 @@ deb-get install code \
 	bitwarden keepassxc \
 	sejda-desktop \
 	rocketchat \
-	bat lsd duf fd
+	bat lsd duf fd \
+	onlyoffice-desktopeditors
 
 
 # NEUROSTUFF SOFTWARE
+
+## MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-mesa-dev libfftw3-dev libpng-dev
+	# en las instrucciones de mrtrix todos eran packetes -dev  
+
+## Afni
+apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
+	# faltan para el 22.04  libgfortran4 libgfortran-8-dev
+#### link simbolico que afni requiere
+ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+
 
 # para fsl 509
 # apt install libmng-dev
@@ -86,17 +108,21 @@ deb-get install code \
 #cp -v $f /usr/lib/x86_64-linux-gnu/
 
 
-# para mrtrix
+# para mrtrix (version anteior?)
 # apt install libgtkglext1
 #f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
 #ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
 
 # para freesurfer 5.3
-# apt install tcsh
 
 
 
-# removing .deb in /tmp
+
+
+
+# Terminando la instalacion
+
+## removing .deb in /tmp
 rm -f -v /tmp/*.deb
 
 echo "[finished installing software]"
