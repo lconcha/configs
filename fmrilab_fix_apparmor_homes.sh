@@ -13,7 +13,7 @@ echo "Will fix apparmor allowed homes so that we can use snaps"
 
 
 apparmorfile=/etc/apparmor.d/tunables/home.d/fmrilab
-echo @{HOMEDIRS}+=/home/inb/ >> $apparmorfile
+echo @{HOMEDIRS}+=/home/inb/ > $apparmorfile
 rm -f /etc/apparmor.d/cache/* /var/cache/apparmor/snap.*
 
 echo "YOU NEED TO REBOOT FOR CHANGES TO TAKE EFFECT!"
