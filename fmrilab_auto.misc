@@ -20,7 +20,6 @@ arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 #bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
 cannabis  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
-cannabis2 -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
 carr2 -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr2
