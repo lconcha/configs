@@ -18,7 +18,10 @@ apt install ssh sshfs \
   apcupsd \
   gnome-tweaks gnome-shell-extensions \
   python-is-python3 python3-matplotlib python3-numpy \
-  xfonts-base xfonts-100dpi 
+  xfonts-base xfonts-100dpi \
+  python-is-python3 \
+  git \
+  vlc
 
 ## Apps a instalar
 apt install xterm tilix \
@@ -34,6 +37,11 @@ apt autoremove
 
 ### añadidos para mrtrix y afni: python-is-python3 python3-matplotlib python3-numpy 
 ### añadidos para afni: tcsh, xfonts-base, xfonts-100dpi
+  
+
+## Librerias para otros sofware (mrtrix, fsl, etc.)
+# MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+apt install zlib1g libqt5opengl5 libqt5svg5 libtiff5
 
 
 # PPA SOFTWARE
@@ -77,9 +85,6 @@ deb-get install code \
 	rocketchat \
 	bat lsd duf fd \
 	onlyoffice-desktopeditors
-
-
-
 
 
 # NEUROSTUFF SOFTWARE
