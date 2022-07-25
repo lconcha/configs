@@ -28,11 +28,12 @@ apt install xterm tilix \
   x2goclient x2goserver \
   vim
   
-	# terminator \ terminal padre pero se isntala por encima del default
+	# terminator \ terminal padre pero se instala por encima del default
 
 apt autoremove
 
-
+### añadidos para mrtrix y afni: python-is-python3 python3-matplotlib python3-numpy 
+### añadidos para afni: tcsh, xfonts-base, xfonts-100dpi
 
 
 # PPA SOFTWARE
@@ -61,7 +62,7 @@ apt autoremove
 #Install deb-get
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 
-#deb-get install rstudio \ Hay un big en deb-get para esto, revisar si ya fue resuleto
+#deb-get install rstudio \ Hay un bug en deb-get para esto, revisar si ya fue resuleto
 
 deb-get install code \
 	rclone \
