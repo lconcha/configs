@@ -203,14 +203,7 @@ apt upgrade
 
 
 # SGE
-Todas las computadoras, excepto `tesla`, son nodos `submit` y `exec` dentro del cluster `fmrilab`. Configuremos una nueva computadora así. Para configurarla, hay que hacer ciertos pasos en la nueva computadora, a la que llamaremos `NEWHOST` (nombres comunes en el laboratorio son purcell, ernst, rhesus, arwen, etc. El servidor es `tesla`.
-
-## Login en `NEWHOST`
-Primero, hacemos login como `root` para instalar lo necesario en `NEWHOST`
-```
-apt install gridengine-exec gridengine-client
-```
-Este comando nos preguntará el `CELL name`, y ahí pondremos `fmrilab`
+Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas en [este link](https://hackmd.io/@lconcha/SkVKUSd39).
 
 
 ## Login en `tesla`
@@ -241,29 +234,6 @@ Es opcional, pero a mí me gusta cambiar el número máximo de slots para correr
 ```
 qconf -aattr queue slots “[NEWHOSTNAME.inb.unam.mx=7]" all.q
 ```
-
-## Login en `NEWHOST`
-reconfigurar SGE para que ya lo reconozca el servidor.
-```
-sudo dpkg-reconfigure gridengine-exec
-```
-Ya debería ser posible ver el nuevo host usando
-```
-qstat -f
-```
-Si no está bien configurado, aparecerá el NEWHOST como `N/A`.
-
-
-Probamos el cluster enviando un trabajo muy sencillo:
-```
-fsl_sub -N prueba hostname
-```
-Nos debe regresar en la terminal un número, que es nuestro *ticket* en la cola del cluster.  Si hacemos `qstat` lo veremos en la lista. Cuando desaparece, es que corrió. Si no vemos output de `qstat`, algo anda mal.
-
-Al final, debe haber dos archivos nuevo llamado `prueba.o?????` y `prueba.e?????`. Los `?` indican números y son iguales al ticket que recibimos. Si hacemos `cat prueba.o?????` veremos el nombre del host donde corrió nuestra prueba, indicando que todo está bien.
-
-**Ojo:**  El archivo de configuración que corre cada vez que se inicia una sesión, `$FMRILAB_CONFIGFILE` declara el valor de `SGE_ROOT`que, sin él, `fsl_sub` asume (incorrrectamente) que no hay un cluster SGE. El valor correcto de `SGE_ROOT` es `/var/lib/gridengine`. Este paso no debe hacerse al configurar una máquina, porque en cada sesión se va a declarar esta variable de entorno.
-
 
 ## Singularity
 Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que hace es una carpeta en /opt para que ahí quede el localstatedir (ver [aquí](https://singularity.lbl.gov/admin-guide) para más info).
