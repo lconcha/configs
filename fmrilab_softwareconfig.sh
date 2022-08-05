@@ -2,7 +2,7 @@
 
 # UBUNTU REPOSITORIES
 
-## miscelaneos a instalar
+## CLI apps
 apt install ssh sshfs \
   git \
   wget \
@@ -16,19 +16,16 @@ apt install ssh sshfs \
   curl \
   gdebi-core\
   apcupsd \
-  gnome-tweaks gnome-shell-extensions \
   python-is-python3 python3-matplotlib python3-numpy \
-  xfonts-base xfonts-100dpi \
-  python-is-python3 \
-  git \
-  vlc
+  xfonts-base xfonts-100dpi
 
-## Apps a instalar
-apt install xterm tilix \
+## Apps
+apt install gnome-tweaks gnome-shell-extensions \
+  xterm tcsh tilix \
   shutter \
   inkscape \
-  tcsh \
   x2goclient x2goserver \
+  vlc \
   vim
   
 	# terminator \ terminal padre pero se instala por encima del default
@@ -37,11 +34,6 @@ apt autoremove
 
 ### añadidos para mrtrix y afni: python-is-python3 python3-matplotlib python3-numpy 
 ### añadidos para afni: tcsh, xfonts-base, xfonts-100dpi
-  
-
-## Librerias para otros sofware (mrtrix, fsl, etc.)
-# MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
-apt install zlib1g libqt5opengl5 libqt5svg5 libtiff5
 
 
 # PPA SOFTWARE
@@ -89,18 +81,19 @@ deb-get install code \
 
 # NEUROSTUFF SOFTWARE
 
-## MRtrix3 (git g++ python-is-python3 instalados en miscelaneos)
+## MRtrix3 (git g++ python-is-python3 instalados arriba)
 apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-mesa-dev libfftw3-dev libpng-dev
 	# en las instrucciones de mrtrix todos eran packetes -dev  
 
-## Afni
+## Afni (python stuff, tcsh, xfonts-base, xfonts-100dpi instalados arriba)
 apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
 	# faltan para el 22.04  libgfortran4 libgfortran-8-dev
 #### link simbolico que afni requiere
-ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+#ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19 # Ubunu 20.04
+ln -sf /usr/lib/x86_64-linux-gnu/libgsl.so.27 /usr/lib/x86_64-linux-gnu/libgsl.so.19
 
 
-# para fsl 509
+## para fsl 509
 # apt install libmng-dev
 #ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
 #ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
@@ -108,7 +101,7 @@ ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so
 #cp -v $f /usr/lib/x86_64-linux-gnu/
 
 
-# para mrtrix (version anteior?)
+## para mrtrix (version anteior?)
 # apt install libgtkglext1
 #f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
 #ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
