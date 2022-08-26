@@ -32,6 +32,7 @@
 172.24.80.111   sherrington.inb.unam.mx sherrington
 172.24.80.113   ernst.inb.unam.mx       ernst
 172.24.80.114	nyquist.inb.unam.mx	nyquist
+172.24.80.115   brown.inb.unam.mx	brown
 #
 # Lab Paredes
 172.24.100.47   copula.inb.unam.mx      copula
