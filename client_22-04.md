@@ -210,6 +210,8 @@ Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios
 Ahora hacemos login somo `soporte` en `tesla` para agregar el nodo como exec y submit.
 
 ```
+sudo su
+source /opt/sge/fmrilab/common/settings.sh
 qconf -mq all.q
 ```
 
