@@ -3,11 +3,11 @@
 # UBUNTU REPOSITORIES
 
 ## CLI apps
-apt install ssh sshfs \
+apt -y install ssh sshfs \
   git \
   wget \
   htop \
-  byobu \
+  byobu screen \
   tree \
   xvfb \
   parallel \
@@ -20,7 +20,7 @@ apt install ssh sshfs \
   xfonts-base xfonts-100dpi
 
 ## Apps
-apt install gnome-tweaks gnome-shell-extensions \
+apt -y install gnome-tweaks gnome-shell-extensions \
   xterm tcsh tilix \
   shutter \
   inkscape \
@@ -30,7 +30,7 @@ apt install gnome-tweaks gnome-shell-extensions \
   
 	# terminator \ terminal padre pero se instala por encima del default
 
-apt autoremove
+apt -y autoremove
 
 ### añadidos para mrtrix y afni: python-is-python3 python3-matplotlib python3-numpy 
 ### añadidos para afni: tcsh, xfonts-base, xfonts-100dpi
@@ -43,15 +43,15 @@ apt autoremove
 	# update indices
 	apt update -qq
 	# install two helper packages we need
-	apt install --no-install-recommends software-properties-common dirmngr
+	apt -y install --no-install-recommends software-properties-common dirmngr
 	# add the signing key (by Michael Rutter) for these repos
 	# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
 	# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
 	wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 	# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
-	add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+	add-apt-repository -y "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 
-	apt install --no-install-recommends r-base r-base-dev
+	apt -y install --no-install-recommends r-base r-base-dev
 
 
 
@@ -76,17 +76,17 @@ deb-get install code \
 	sejda-desktop \
 	rocketchat \
 	bat lsd duf fd \
-	onlyoffice-desktopeditors
-
+	onlyoffice-desktopeditors \
+        micro
 
 # NEUROSTUFF SOFTWARE
 
 ## MRtrix3 (git g++ python-is-python3 instalados arriba)
-apt-get install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-mesa-dev libfftw3-dev libpng-dev
+apt -y  install zlib1g libqt5opengl5 libqt5svg5 libtiff5 libeigen3-dev libgl1-mesa-dev libfftw3-dev libpng-dev
 	# en las instrucciones de mrtrix todos eran packetes -dev  
 
 ## Afni (python stuff, tcsh, xfonts-base, xfonts-100dpi instalados arriba)
-apt-get install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
+apt -y install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 libnode-dev libopenblas-dev libudunits2-dev libxm4 libxml2-dev libssl-dev
 	# faltan para el 22.04  libgfortran4 libgfortran-8-dev
 #### link simbolico que afni requiere
 #ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19 # Ubunu 20.04

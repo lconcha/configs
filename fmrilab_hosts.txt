@@ -45,6 +45,9 @@
 # Lab Abraham/Arellano
 172.24.100.143  ridelim.inb.unam.mx     ridelim
 #
+# Lab Flor
+172.24.80.131   milagros.inb.unam.mx    milagros
+#
 # URRA
 172.24.140.49   sesamo8.inb.unam.mx     sesamo8
 172.24.140.48   bruker_console
