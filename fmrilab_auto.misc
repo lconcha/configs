@@ -19,6 +19,7 @@
 arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 #bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
+brown -rw,soft,intr,rsize=8192,wsize=8192 brown:/datos/brown
 cannabis  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
@@ -36,9 +37,10 @@ geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
 hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
-hahn2 -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn2
+#hahn2 -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
+milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 nyquist -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
