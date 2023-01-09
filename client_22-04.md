@@ -197,7 +197,7 @@ Esto instala también varios programas que queremos que estén en la propia máq
 Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia de red (que voltea a ver a `tesla`). Como `root`:
 
 ```
-scpresume soporte@mansfield:/usr/local/MATLAB /usr/local/
+sudo rsync -avz --partial --progress  soporte@mansfield:/usr/local/MATLAB /usr/local/
 ```
 
 Ya casi vamos a rebootear, así que ahora:
