@@ -193,6 +193,13 @@ El software está centralizado. Algunas librerías y dependencias cambiaron entr
 Esto instala también varios programas que queremos que estén en la propia máquina (no centralizados, como fsl, mrtrix o freesurfer), por ejemplo: rstudio, google-chrome, chromium-browser, x2go, sshfs, inkscape, keepass, htop, tree, curl. Además se aprovecha para instalar (en un solo paso), los programas que se requieren para que mrtrix, fsl y freesurfer corran bien (tcsh, libmng, libgtkglext1, etc).
 
 
+# Matlab
+Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia de red (que voltea a ver a `tesla`). Como `root`:
+
+```
+scpresume soporte@mansfield:/usr/local/MATLAB /usr/local/
+```
+
 Ya casi vamos a rebootear, así que ahora:
 ```
 apt update
