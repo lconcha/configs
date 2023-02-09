@@ -193,6 +193,13 @@ El software está centralizado. Algunas librerías y dependencias cambiaron entr
 Esto instala también varios programas que queremos que estén en la propia máquina (no centralizados, como fsl, mrtrix o freesurfer), por ejemplo: rstudio, google-chrome, chromium-browser, x2go, sshfs, inkscape, keepass, htop, tree, curl. Además se aprovecha para instalar (en un solo paso), los programas que se requieren para que mrtrix, fsl y freesurfer corran bien (tcsh, libmng, libgtkglext1, etc).
 
 
+# Matlab
+Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia de red (que voltea a ver a `tesla`). Como `root`:
+
+```
+sudo rsync -avz --partial --progress  soporte@mansfield:/usr/local/MATLAB /usr/local/
+```
+
 Ya casi vamos a rebootear, así que ahora:
 ```
 apt update
@@ -243,5 +250,5 @@ Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que ha
 
 
 
-## Ganglia monitor
-Hay que correr el script `fmrilab_config_ganglia_client.sh`. Este script instala y configura ganglia de acuerdo a [estas instrucciones](HOWTO-ganglia.md) (ahí está también cómo instalarlo en el servidor `tesla`). A veces se tarda unos minutos en que aparezca en la web interface (en [http://172.24.80.102/ganglia](http://172.24.80.102/ganglia)), y en ocasiones es necesario apagar y volver a prender el servicio en el cliente usando `systemctl restart ganglia-monitor`.
+## Netdata Cloud
+Agregar al panel de netdata cloud. Esto solo lo puede hacer lconcha en su cuenta de app.netdata.cloud. Ir a `Connect nodes` y correr el comando `wget` que viene ahí.
