@@ -4,7 +4,7 @@
 
 ## CLI apps
 apt -y install ssh sshfs \
-  git \
+  git git-lfs \
   wget \
   htop \
   byobu screen \
@@ -58,6 +58,7 @@ apt -y autoremove
 
 
 ## DEB-GET SOFTWARE
+export DEBGET_TOKEN=$(cat lconcha_debget_token.txt)
 
 #Install deb-get
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
@@ -91,6 +92,9 @@ apt -y install gsl-bin libcurl4-openssl-dev libgdal-dev libglw1-mesa libjpeg62 l
 #### link simbolico que afni requiere
 #ln -s /usr/lib/x86_64-linux-gnu/libgsl.so.23 /usr/lib/x86_64-linux-gnu/libgsl.so.19 # Ubunu 20.04
 ln -sf /usr/lib/x86_64-linux-gnu/libgsl.so.27 /usr/lib/x86_64-linux-gnu/libgsl.so.19
+
+## para dsi-studio
+apt -y install qt6-base-dev libqt6charts6-dev
 
 
 ## para fsl 509
