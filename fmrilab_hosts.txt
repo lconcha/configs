@@ -21,11 +21,9 @@
 172.24.80.99    penfield.inb.unam.mx    penfield
 172.24.80.101   tanner.inb.unam.mx      tanner
 172.24.80.102   tesla.inb.unam.mx       tesla
-172.24.80.103   tezca.inb.unam.mx       tezca
 172.24.80.104   sesamo.inb.unam.mx      sesamo
 172.24.80.105   rhesus.inb.unam.mx      rhesus
 172.24.80.106   mansfield.inb.unam.mx   mansfield
-172.24.80.107   purcell.inb.unam.mx     purcell
 172.24.80.108   bloch.inb.unam.mx       bloch
 172.24.80.109   hahn.inb.unam.mx        hahn
 172.24.80.110   carr.inb.unam.mx        carr
@@ -48,10 +46,14 @@
 # Lab Flor
 172.24.80.131   milagros.inb.unam.mx    milagros
 #
+# Lab Garza
+172.24.50.113	tezca.inb.unam.mx		tezca
 # URRA
-172.24.140.49   sesamo8.inb.unam.mx     sesamo8
+172.24.140.42   purcell.inb.unam.mx     purcell
 172.24.140.48   bruker_console
+172.24.140.49   sesamo8.inb.unam.mx     sesamo8
 172.24.140.50	bruker7
+
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback

@@ -1,6 +1,7 @@
 # This auto.misc file comes from a central location
 # created by Leopoldo and lconcha 
-# master file is /home/inb/lconcha/fmrilab_auto.misc
+# updated by rrios
+# master file is /home/inb/soporte/fmrilab_auto.misc
 ## This is an automounter map and it has the following format
 # key [ -mount-options-separated-by-comma ] location
 # Details may be found in the autofs(5) manpage
@@ -15,7 +16,7 @@
 #jaz		-fstype=ext2		:/dev/sdc1
 #removable	-fstype=ext2		:/dev/hdd
 
-
+# NODES in cluster
 arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 #bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
@@ -32,12 +33,13 @@ copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
-fourier -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
+fourier  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
 geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
+geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
-hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
+#hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
 #hahn2 -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
@@ -56,14 +58,16 @@ sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tezca   -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca
-tezca2   -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca2
-tournoux  -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
+tezca2  -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca2
+tournoux   -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
+tournoux2  -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
 
+# Barrios lab backup systems
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
 
-bruker_pvDatasets2 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets2
-bruker_pvDatasets3 -rw,soft,intr,rsize=8192,wsize=8192  bruker_console:/mnt/pvDatasets3
-bruker7 -rw,soft,intr,rsize=8192,wsize=8192  bruker7:/mnt
+# URRA console
+bruker7 -ro,soft,intr,rsize=8192,wsize=8192  bruker7:/mnt
 
+# Lconcha lab backup system
 sesamo -ro,soft	sesamo:/volume1/fmrilab
-sesamo8 -ro,soft sesamo8:/volume1/bruker
+#sesamo8 -ro,soft sesamo8:/volume1/bruker
