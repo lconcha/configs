@@ -79,7 +79,7 @@ alias dsi=/home/inb/soporte/lanirem_software/dsi-studio/dsi_studio
 # OTROS
 
 #  Configuramos otras herramientas
-export PATH=${PATH}:/home/inb/soporte/lanirem_software/inb_tools
+export PATH=${PATH}:/home/inb/soporte/inb_tools
 
 # Paraview
 export PATH=${PATH}:/home/inb/soporte/lanirem_software/ParaView-5/bin
