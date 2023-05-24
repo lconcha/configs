@@ -34,16 +34,16 @@ fi
 
 # Configuramos fsl
 export FSLPARALLEL=1
-export FSL602_SETUP_FILE=/home/inb/soporte/lanirem_software/tools/setup_fsl602
+export FSL602_SETUP_FILE=/home/inb/soporte/admin_tools/setup_fsl602
 alias fsl602='source $FSL602_SETUP_FILE'
 
 # Configuramos freesurfer
 FS_FREESURFERENV_NO_OUTPUT=1
-alias freesurfer7="source /home/inb/soporte/lanirem_software/tools/setup_freesurfer7.sh"
+alias freesurfer7="source /home/inb/soporte/admin_tools/setup_freesurfer7.sh"
 
 
 # Alias para mrtrix3
-alias mrtrix3='source /home/inb/soporte/lanirem_software/tools/setup_mrtrix3.sh'
+alias mrtrix3='source /home/inb/soporte/admin_tools/setup_mrtrix3.sh'
 
 # slicer
 alias slicer=/home/inb/soporte/lanirem_software/Slicer-4.2.2-1-linux-amd64/./Slicer
