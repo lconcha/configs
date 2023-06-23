@@ -34,9 +34,6 @@ echo "Editando /etc/yp.conf"
 echo "ypserver 172.24.80.102" >> /etc/yp.conf
 
 
-echo "Editando /etc/profile"
-cat ./fmrilab_profile >> /etc/profile
-
 echo "Editando /lib/systemd/system/systemd-logind.service "
 
 sed -i 's/^IPAddressDeny=any/#IPAddressDeny=any/' /lib/systemd/system/systemd-logind.service
