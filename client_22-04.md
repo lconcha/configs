@@ -182,8 +182,6 @@ Y reiniciamos el servidor NFS
 
 
 
-
-
 # Configurar software
 El software está centralizado. Algunas librerías y dependencias cambiaron entre ubuntu 14.04 y 18.04. Para arreglarlo, corremos el script
 ```
@@ -200,13 +198,27 @@ Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia 
 sudo rsync -avz --partial --progress  soporte@mansfield:/usr/local/MATLAB /usr/local/
 ```
 
-Ya casi vamos a rebootear, así que ahora:
+## Singularity
+Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que hace es una carpeta en /opt para que ahí quede el localstatedir (ver [aquí](https://singularity.lbl.gov/admin-guide) para más info).
+
+
+# Configurar fmrilab_profile
+
+Copiamos fmrilab_profile.sh a /etc/profile.d . Este script contiene las configuraciones de arranque para las máquinas en don clusterio. Por el momento solo consifte en exportar la variable de sistema FMRILAB_CONFIGFILE que tiene todo los paths de los software 
+```
+./fmrilab_config_profile.sh
+```
+
+
+# reboot
+
+Antes de reebotear una actualizacion del software y despues reboot
 ```
 apt update
 apt upgrade
+apt reboot
 ```
 
-# reboot
 
 
 # SGE
@@ -244,8 +256,7 @@ Es opcional, pero a mí me gusta cambiar el número máximo de slots para correr
 qconf -aattr queue slots “[NEWHOSTNAME.inb.unam.mx=7]" all.q
 ```
 
-## Singularity
-Nada más correr el script `fmrilab_config_singularity.sh`, que lo único que hace es una carpeta en /opt para que ahí quede el localstatedir (ver [aquí](https://singularity.lbl.gov/admin-guide) para más info).
+
 
 
 
