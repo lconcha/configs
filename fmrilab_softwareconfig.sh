@@ -7,7 +7,7 @@ apt -y install ssh sshfs \
   git git-lfs \
   wget \
   htop \
-  byobu screen \
+  byobu \
   tree \
   xvfb \
   parallel \
@@ -16,6 +16,8 @@ apt -y install ssh sshfs \
   curl \
   gdebi-core\
   apcupsd \
+  environment-modules \
+  neofetch \
   borgbackup \
   python-is-python3 python3-matplotlib python3-numpy \
   xfonts-base xfonts-100dpi
