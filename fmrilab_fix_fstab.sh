@@ -15,7 +15,7 @@ echo "# fmrilab homes (auto-generado por script `basename $0`" >> /etc/fstab
 #echo "tesla:/home/inb /home/inb nfs timeo=14,fsc,intr,bg,resvport,soft,nfsvers=3 0 0" >> /etc/fstab
 
 # para NFSv4
-echo "tesla:/inb	/home/inb	nfs4	_netdev,auto,fsc	0	0" >> /etc/fstab
+echo "hahn:/inb	/home/inb	nfs4	_netdev,auto,fsc	0	0" >> /etc/fstab
 
 mount -av
 
