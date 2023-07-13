@@ -66,9 +66,7 @@ export DEBGET_TOKEN=$(cat lconcha_debget_token.txt)
 #Install deb-get
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 
-#deb-get install rstudio \ Hay un bug en deb-get para esto, revisar si ya fue resuleto
-
-deb-get install code \
+deb-get install rstudio code \
 	rclone \
 	gitkraken \
 	zotero \
@@ -79,7 +77,7 @@ deb-get install code \
 	bitwarden keepassxc \
 	sejda-desktop \
 	rocketchat \
-	bat lsd duf fd \
+	bat lsd duf fd du-dust \
 	onlyoffice-desktopeditors \
         micro
 
@@ -98,25 +96,6 @@ ln -sf /usr/lib/x86_64-linux-gnu/libgsl.so.27 /usr/lib/x86_64-linux-gnu/libgsl.s
 
 ## para dsi-studio
 apt -y install qt6-base-dev libqt6charts6-dev
-
-
-## para fsl 509
-# apt install libmng-dev
-#ln -sv /usr/lib/x86_64-linux-gnu/libmng.so.2 /usr/lib/x86_64-linux-gnu/libmng.so.1
-#ln -sv /usr/lib/x86_64-linux-gnu/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.62
-#f=`locate libpng12.so.0 | head -n 1`
-#cp -v $f /usr/lib/x86_64-linux-gnu/
-
-
-## para mrtrix (version anteior?)
-# apt install libgtkglext1
-#f=/usr/lib/x86_64-linux-gnu/libgsl.so.23
-#ln -sv $f /usr/lib/x86_64-linux-gnu/libgsl.so.0
-
-# para freesurfer 5.3
-
-
-
 
 
 
