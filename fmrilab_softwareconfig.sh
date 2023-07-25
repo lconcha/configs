@@ -97,6 +97,8 @@ ln -sf /usr/lib/x86_64-linux-gnu/libgsl.so.27 /usr/lib/x86_64-linux-gnu/libgsl.s
 ## para dsi-studio
 apt -y install qt6-base-dev libqt6charts6-dev
 
+# Para singularity
+apt -y install fuse2fs squashfuse gocryptfs
 
 
 # Terminando la instalacion
