@@ -1,8 +1,8 @@
-# Lab Merchant
+# Lab Merchant/B-15
 172.24.60.129   mountcastle.inb.unam.mx mountcastle
 172.24.60.157   evarts.inb.unam.mx      evarts
 #
-# Lab Barrios
+# Lab Barrios/C-12
 172.24.80.70    jasper.inb.unam.mx      jasper
 172.24.80.71    shaftoe.inb.unam.mx     shaftoe
 172.24.80.73    cannabis.inb.unam.mx    cannabis
@@ -15,7 +15,7 @@
 172.24.80.84    drobo02.inb.unam.mx     drobo02
 172.24.80.90    tournoux.inb.unam.mx    tournoux
 #
-# Lab C13
+# Lab Concha/C13
 172.24.80.97    fourier.inb.unam.mx     fourier
 172.24.80.98    rabi.inb.unam.mx        rabi
 172.24.80.99    penfield.inb.unam.mx    penfield
@@ -32,22 +32,21 @@
 172.24.80.114	nyquist.inb.unam.mx	nyquist
 172.24.80.115   brown.inb.unam.mx	brown
 #
-# Lab Paredes
+# Lab Paredes/D-11
 172.24.100.47   copula.inb.unam.mx      copula
 172.24.100.49   copula2.inb.unam.mx     copula2
 #
-# Lab Giordano
+# Lab Garza/D-12
 172.24.100.73   giora.inb.unam.mx       giora
 172.24.100.74   austin.inb.unam.mx      austin
+172.24.50.113	tezca.inb.unam.mx	tezca
 #
-# Lab Abraham/Arellano
+# Lab Abraham-Arellano/D-14
 172.24.100.143  ridelim.inb.unam.mx     ridelim
 #
-# Lab Flor
+# Lab Flor/C-14
 172.24.80.131   milagros.inb.unam.mx    milagros
 #
-# Lab Garza
-172.24.50.113	tezca.inb.unam.mx		tezca
 # URRA
 172.24.140.42   purcell.inb.unam.mx     purcell
 172.24.140.48   bruker_console
