@@ -44,7 +44,7 @@ giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
-mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
+#mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 nyquist -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
@@ -57,6 +57,9 @@ sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
+tesla1   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla1
+tesla2   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla2
+tesla3   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla3
 tezca   -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca
 tezca2  -rw,soft,intr,rsize=8192,wsize=8192 tezca:/datos/tezca2
 tournoux   -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux
