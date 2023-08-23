@@ -1,5 +1,5 @@
 # Lab Merchant/B-15
-172.24.60.129   mountcastle.inb.unam.mx mountcastle
+#172.24.60.129   mountcastle.inb.unam.mx mountcastle
 172.24.60.157   evarts.inb.unam.mx      evarts
 #
 # Lab Barrios/C-12

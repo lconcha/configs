@@ -68,7 +68,7 @@ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | su
 
 deb-get install rstudio code \
 	rclone \
-	gitkraken \
+	github-desktop \
 	zotero \
 	pandoc \
 	zoom \
