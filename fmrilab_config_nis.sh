@@ -30,8 +30,9 @@ mv -v /etc/nsswitch.conf /etc/nsswitch.conf.original
 cp -v $fmrilab_nsswitch /etc/nsswitch.conf
 
 
+# ip servidor hahn
 echo "Editando /etc/yp.conf"
-echo "ypserver 172.24.80.102" >> /etc/yp.conf
+echo "ypserver 172.24.80.109" >> /etc/yp.conf
 
 
 echo "Editando /lib/systemd/system/systemd-logind.service "
