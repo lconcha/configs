@@ -39,7 +39,7 @@
 # Lab Garza/D-12
 172.24.100.73   giora.inb.unam.mx       giora
 172.24.100.74   austin.inb.unam.mx      austin
-172.24.50.113	tezca.inb.unam.mx	tezca
+172.24.100.79	tezca.inb.unam.mx	tezca
 #
 # Lab Abraham-Arellano/D-14
 172.24.100.143  ridelim.inb.unam.mx     ridelim
