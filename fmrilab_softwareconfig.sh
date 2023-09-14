@@ -66,6 +66,10 @@ export DEBGET_TOKEN=$(cat lconcha_debget_token.txt)
 #Install deb-get
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 
+# install office fonts for onlyoffice
+apt install ttf-mscorefonts-installer -y
+
+# install deb-get software
 deb-get install rstudio code \
 	rclone \
 	github-desktop \
