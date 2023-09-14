@@ -27,7 +27,7 @@ apt -y install gnome-tweaks gnome-shell-extensions \
   xterm tcsh tilix \
   shutter \
   inkscape \
-  x2goclient x2goserver \
+  x2goclient x2goserver lxde \
   vlc \
   vim
   
