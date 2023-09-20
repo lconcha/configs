@@ -31,6 +31,7 @@
 172.24.80.113   ernst.inb.unam.mx       ernst
 172.24.80.114	nyquist.inb.unam.mx	nyquist
 172.24.80.115   brown.inb.unam.mx	brown
+172.24.80.117   larmor.inb.unam.mx	larmor
 #
 # Lab Paredes/D-11
 172.24.100.47   copula.inb.unam.mx      copula
