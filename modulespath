@@ -12,5 +12,5 @@
 #/usr/share/modules/versions				# location of version files
 #/usr/share/modules/$MODULE_VERSION/modulefiles	# Module pkg modulefiles (if versioning)
 #/usr/share/modules/modulefiles				# General module files
-#/misc/rhesus/rrios/Don_Clusterio/Code/admin_tools/modulesfiles	#Don clusterio modules
-/home/inb/soporte/admin_tools/modulesfiles
+
+/home/inb/soporte/admin_tools/modulesfiles#Don clusterio modules
