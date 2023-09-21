@@ -43,6 +43,7 @@ giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
 #hahn2 -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
+lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 #mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
