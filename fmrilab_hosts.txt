@@ -19,6 +19,7 @@
 172.24.80.97    fourier.inb.unam.mx     fourier
 172.24.80.98    rabi.inb.unam.mx        rabi
 172.24.80.99    penfield.inb.unam.mx    penfield
+172.24.80.100   lauterbur.inb.unam.mx	lauterbur
 172.24.80.101   tanner.inb.unam.mx      tanner
 172.24.80.102   tesla.inb.unam.mx       tesla
 172.24.80.104   sesamo.inb.unam.mx      sesamo
@@ -32,6 +33,7 @@
 172.24.80.114	nyquist.inb.unam.mx	nyquist
 172.24.80.115   brown.inb.unam.mx	brown
 172.24.80.117   larmor.inb.unam.mx	larmor
+
 #
 # Lab Paredes/D-11
 172.24.100.47   copula.inb.unam.mx      copula
