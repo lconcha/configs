@@ -19,7 +19,7 @@
 # NODES in cluster
 arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
-#bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
+bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
 brown -rw,soft,intr,rsize=8192,wsize=8192 brown:/datos/brown
 cannabis  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
 cannabis2  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
