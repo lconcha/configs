@@ -20,7 +20,8 @@ apt -y install ssh sshfs \
   neofetch \
   borgbackup \
   python-is-python3 python3-matplotlib python3-numpy \
-  xfonts-base xfonts-100dpi
+  xfonts-base xfonts-100dpi \
+  ncdu
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
