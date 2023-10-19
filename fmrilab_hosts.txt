@@ -29,6 +29,7 @@
 172.24.80.109   hahn.inb.unam.mx        hahn
 172.24.80.110   carr.inb.unam.mx        carr
 172.24.80.111   sherrington.inb.unam.mx sherrington
+172.24.80.112   damadian.inb.unam.mx 	damadian
 172.24.80.113   ernst.inb.unam.mx       ernst
 172.24.80.114	nyquist.inb.unam.mx	nyquist
 172.24.80.115   brown.inb.unam.mx	brown

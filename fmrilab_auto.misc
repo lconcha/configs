@@ -30,6 +30,7 @@ charcot   -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
 charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
+damadian  -rw,soft,intr,rsize=8192,wsize=8192 damadian:/datos/damadian
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
