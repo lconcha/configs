@@ -40,6 +40,20 @@ sudo passwd -u root
 
 
 # Red
+
+## En terminal
+
+login root (en nueva terminal)
+
+Utilizar el comando `nmtui`  para configurar la red.
+
+Navegamos a la conección a editar y camniamos a manual la configuraicon de IPv4.
+
+Address: 172.24.*.* (según computadora)
+Gateway: 172.24.80.126 (cambia en cada laboratorio)
+DNS servers: 132.248.10.2,132.248.204.1,208.67.222.222	
+
+## En interfaz grafica
 Ir a `settings`, después a `network` y en `wired` dar al ícono de configuración. En la pestaña `IPv4`. Cambiamos a manual.
 
 Address: 172.24.*.* (según computadora)
@@ -70,8 +84,9 @@ Una vez que reinicie la máquina, nos saludará la interface gráfica llamada `g
 # Hosts
 Tengo un script que ayuda a configurar los hosts.
 De aquí en adelante se asume que **hicimos login (de texto) como root.**
+Nota: Por ahora el servido es hahn con ip 172.24.80.109
 ```
-scp -r soporte@172.24.80.102:/home/inb/soporte/configs .
+scp -r soporte@172.24.80.109:/home/inb/soporte/configs .
 cd configs
 ./fmrilab_fix_hosts_file.sh
 ```
@@ -134,7 +149,7 @@ soporte ALL=(ALL:ALL) ALL
 
 Modificamos el UID del primer usuario de esta PC, de lo contrario va a colisionar con el de lconcha en el servidor (UID=1000)
 ```
-fmrilab_mod_uid_soporte_local.sh
+./fmrilab_mod_uid_soporte_local.sh
 ```
 
 Corremos el script
@@ -181,7 +196,6 @@ Y reiniciamos el servidor NFS
 **OJO** Tendremos que declarar este export en todas las otras máquinas, lo que se hace fácilmente si editamos `fmrilab_auto.misc` y corremos en cada máquina los scripts `fmrilab_fix_hosts_file.sh` y `fmrilab_fix_misc.sh`
 
 
-
 # Configurar software
 El software está centralizado. Algunas librerías y dependencias cambiaron entre ubuntu 14.04 y 18.04. Para arreglarlo, corremos el script
 ```
@@ -190,9 +204,19 @@ El software está centralizado. Algunas librerías y dependencias cambiaron entr
 
 Esto instala también varios programas que queremos que estén en la propia máquina (no centralizados, como fsl, mrtrix o freesurfer), por ejemplo: rstudio, google-chrome, chromium-browser, x2go, sshfs, inkscape, keepass, htop, tree, curl. Además se aprovecha para instalar (en un solo paso), los programas que se requieren para que mrtrix, fsl y freesurfer corran bien (tcsh, libmng, libgtkglext1, etc).
 
+## Modulos
+
+El software de modulos se instalo con fmrilab_softwareconfig (Nota al futuro: Dado que al fin del dia es un script, es posible centralizar los enviroment modules dentro de lanirem_software). 
+
+Las configuraciones de los paths de los modulos de don clusterio se encuentran en FMRILAB_CONFIGFILE. Pero por si acaso actualizamos los modulos iniciales (los que apuntan a la carpeta de modulos del home de soporte) del enviroments module con 
+```
+./fmrilab_fix_modulespath_file.sh
+```
 
 # Matlab
-Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia de red (que voltea a ver a `tesla`). Como `root`:
+*Nota* Con los modulos esto ya no sera necesario cuando centralicen matlab en lanirem_software.
+
+Simplemente copiar la instalación de otra máquina. Eso ya incluye la licencia de red (que voltea a ver al servidor). Como `root`:
 
 ```
 sudo rsync -avz --partial --progress  soporte@mansfield:/usr/local/MATLAB /usr/local/
