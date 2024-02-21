@@ -21,7 +21,8 @@ apt -y install ssh sshfs \
   borgbackup \
   python-is-python3 python3-matplotlib python3-numpy \
   xfonts-base xfonts-100dpi \
-  ncdu
+  ncdu \
+  pigz
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
