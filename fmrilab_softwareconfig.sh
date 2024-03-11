@@ -22,7 +22,8 @@ apt -y install ssh sshfs \
   python-is-python3 python3-matplotlib python3-numpy \
   xfonts-base xfonts-100dpi \
   ncdu \
-  pigz
+  pigz \
+  detox
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
