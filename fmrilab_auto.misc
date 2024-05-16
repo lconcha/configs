@@ -72,6 +72,7 @@ tournoux2  -rw,soft,intr,rsize=8192,wsize=8192 tournoux:/datos/tournoux2
 
 # Barrios lab backup systems
 drobo02 -rw,soft,intr,rsize=8192,wsize=8192 drobo02:/mnt/DroboFS/Shares/Scratch
+LabC12    -soft synology-labc12:/volume1/synologylab12
 
 # URRA console
 bruker7 -ro,soft,intr,rsize=8192,wsize=8192  bruker7:/mnt

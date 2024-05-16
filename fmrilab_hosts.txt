@@ -14,6 +14,7 @@
 172.24.80.83    drobo01.inb.unam.mx     drobo01
 172.24.80.84    drobo02.inb.unam.mx     drobo02
 172.24.80.90    tournoux.inb.unam.mx    tournoux
+172.24.80.85                            synology-labc12
 #
 # Lab Concha/C13
 172.24.80.97    fourier.inb.unam.mx     fourier
