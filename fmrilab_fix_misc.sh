@@ -3,7 +3,7 @@
 apt install rpcbind nfs-common autofs
 
 
-masterFilesDir=/home/inb/soporte/configs
+masterFilesDir=.
 
 fmrilab_misc=${masterFilesDir}/fmrilab_auto.misc
 fmrilab_home=${masterFilesDir}/fmrilab_auto.home
