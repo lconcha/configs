@@ -4,7 +4,7 @@
 27 de mayo de 2022
 lconcha
 Disponible en:
-https://github.com/lconcha/configs/blob/master/client_12-04.md
+https://github.com/lconcha/configs/blob/master/client_22-04.md
 
 # Instalación 
 
