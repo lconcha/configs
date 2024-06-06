@@ -4,7 +4,7 @@
 
 ## CLI apps
 apt -y install ssh sshfs \
-  git git-lfs \
+  git git-lfs git-annex \
   wget \
   htop \
   byobu \
