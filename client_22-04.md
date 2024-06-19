@@ -84,14 +84,14 @@ Una vez que reinicie la máquina, nos saludará la interface gráfica llamada `g
 # Hosts
 Tengo un script que ayuda a configurar los hosts.
 De aquí en adelante se asume que **hicimos login (de texto) como root.**
-Nota: Por ahora el servido es hahn con ip 172.24.80.109
+Nota: Por ahora el servidor es hahn con ip 172.24.80.109
 ```
 scp -r soporte@172.24.80.109:/home/inb/soporte/configs .
 cd configs
 ./fmrilab_fix_hosts_file.sh
 ```
 
-Probamos con un `ping tesla`, que nos debe funcionar.
+Probamos con un `ping hahn`, que nos debe funcionar.
 
 **Nota:** La carpeta `configs` tiene varios scripts que vamos ir usando a lo largo de esta instalación. 
 
@@ -123,7 +123,7 @@ mkdir /home/inb
 ./fmrilab_fix_fstab.sh
 ```
 
-** Si la maquina no está aún configurada en el servidor `tesla`, debemos agregarla ahí usando el script `fmrilab_fix_hosts_file.sh` y agregarla por nombre a `/etc/netgroup`
+** Si la maquina no está aún configurada en el servidor `hahn`, debemos agregarla ahí usando el script `fmrilab_fix_hosts_file.sh` y agregarla por nombre a `/etc/netgroup`
 
 Corremos un script para ello:
 ```
@@ -167,7 +167,7 @@ Corremos el script
 
 :warning: Actualización 28 sep 2020: Cambié la manera en que se exporta y monta `/home/inb`. Pasamos de NFSv3 a NFSv4, y ya no se monta mediante `autfs`, sino mediante `/etc/fstab`. La razón es que de pronto los homes se hicieron lentos y viene explicado [aquí](https://hackmd.io/@lconcha/S1dsZzKrP), y los pasos para arreglar una máquina en caliente vienen [acá](https://hackmd.io/@lconcha/rkrJeFkUv). El 28 de sep pasé todas las máquinas a homes mediante NFSv4 y fstab, y edité los scripts de este repositorio.
 
-**Ojo4:** Tengo grabado en el google drive los archivos passwd y shadow, por si es necesario modificar el servidor. El archivo se llama baks_tesla.tar.gz
+**Ojo4:** Tengo grabado en el google drive los archivos passwd y shadow, por si es necesario modificar el servidor. El archivo se llama baks_hahn.tar.gz
 
 
 
@@ -249,8 +249,8 @@ apt reboot
 Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas en [este link](https://hackmd.io/@lconcha/SkVKUSd39).
 
 
-## Login en `tesla`
-Ahora hacemos login somo `soporte` en `tesla` para agregar el nodo como exec y submit.
+## Login en `hahn`
+Ahora hacemos login somo `soporte` en `hahn` para agregar el nodo como exec y submit.
 
 ```
 sudo su
