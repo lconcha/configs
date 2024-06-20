@@ -51,6 +51,9 @@ mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 #mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 nyquist -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist
+ogawa   -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa
+ogawa2  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa2
+ogawa3  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa3
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
 rabi    -rw,soft,intr,rsize=8192,wsize=8192 rabi:/datos/rabi

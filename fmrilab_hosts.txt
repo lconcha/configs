@@ -59,6 +59,8 @@
 172.24.140.48   bruker_console
 172.24.140.49   sesamo8.inb.unam.mx     sesamo8
 172.24.140.50	bruker7
+# URM
+192.168.192.200        ogawa.inb.unam.mx       ogawa
 
 
 # The following lines are desirable for IPv6 capable hosts
