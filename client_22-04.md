@@ -260,10 +260,7 @@ qconf -mq all.q
 
 Esto abrirá un editor de texto con la configuración de la cola `all.q`. Agregar el host (`NEWHOST`, usando el nombre que le dimos) a la lista de hosts. (si el editor es vi, recuerda que presionar `i` nos permitirá editar, y para salir y grabar presionamos `ESC` y escribimos: `wq`).
 
-Agregamos el NEWHOST al grupo de hosts
-```
-qconf -mhgrp @allhosts
-```
+
 
 Agregamos NEWHOST como submit host
 ```
