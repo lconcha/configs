@@ -31,6 +31,8 @@ charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 damadian  -rw,soft,intr,rsize=8192,wsize=8192 damadian:/datos/damadian
+echinopsis1 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis1
+echinopsis2 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis2
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
@@ -49,11 +51,14 @@ lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 lauterbur2 -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur2
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
+moca1     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca1
+moca2     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca2
 #mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 nyquist -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist
 ogawa   -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa
 ogawa2  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa2
 ogawa3  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa3
+opuntia -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
 rabi    -rw,soft,intr,rsize=8192,wsize=8192 rabi:/datos/rabi
@@ -64,7 +69,7 @@ rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
-tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
+#tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tesla1   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla1
 tesla2   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla2
 tesla3   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla3
