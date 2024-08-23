@@ -42,8 +42,6 @@ geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
-#hahn -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn
-#hahn2 -rw,soft,intr,rsize=8192,wsize=8192 hahn:/datos/hahn2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
 larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
@@ -53,8 +51,8 @@ mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 moca1     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca1
 moca2     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca2
-#mountcastle -rw,soft,intr,rsize=8192,wsize=8192 mountcastle:/datos/mountcastle
 nyquist -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist
+nyquist2 -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist2
 ogawa   -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa
 ogawa2  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa2
 ogawa3  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa3
@@ -69,7 +67,6 @@ rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
-#tanner2 -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner2
 tesla1   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla1
 tesla2   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla2
 tesla3   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla3
