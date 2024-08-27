@@ -23,7 +23,8 @@ apt -y install ssh sshfs \
   xfonts-base xfonts-100dpi \
   ncdu \
   pigz \
-  detox
+  detox \
+  zsh
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
