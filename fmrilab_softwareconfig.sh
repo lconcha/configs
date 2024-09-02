@@ -25,7 +25,8 @@ apt -y install ssh sshfs \
   pigz \
   detox \
   jq \
-  zsh
+  zsh \
+  libreoffice-java-common
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
