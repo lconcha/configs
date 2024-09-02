@@ -24,6 +24,7 @@ apt -y install ssh sshfs \
   ncdu \
   pigz \
   detox \
+  jq \
   zsh
 
 ## Apps
