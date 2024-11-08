@@ -134,6 +134,8 @@ Corremos un script para ello:
 
  **Ojo** El script también instalará `cachefilesd` para agilizar (en teoría) el acceso de los homes montados mediante nfs. Para ello, la ruta montada indicada en`auto.home` tiene 	 la opción `fsc`.
 
+ **Ojo** Hay que agregar a la nueva PC como parte de `nethosts` editando el archivo `/etc/netgroup` en el servidor (`hahn`), y para que haga efecto hay que recompilar con `sudo make -C /var/yp`. Si no hacemos este paso, la nueva PC no va a poder ver los `/misc`.
+
 
 # NIS
 Y para evitar problemas próximos, agregamos a `soporte` como sudoer
@@ -282,5 +284,5 @@ qconf -aattr queue slots “[NEWHOSTNAME.inb.unam.mx=7]" all.q
 
 
 
-## Netdata Cloud
+## Netdata Cloud (ya no lo hacemos desde 2024)
 Agregar al panel de netdata cloud. Esto solo lo puede hacer lconcha en su cuenta de app.netdata.cloud. Ir a `Connect nodes` y correr el comando `wget` que viene ahí.
