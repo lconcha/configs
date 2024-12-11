@@ -9,7 +9,7 @@ Alternativamente, podemos usar distintos comandos para ver distintos tipos de in
 ## Hosts que puede ver SGE
 Esto lo vemos con el comando `qhost`. Lo puede hacer cualquier usuario, no hace falta ser `sudo`.
 
-![image](https://hackmd.io/_uploads/SyeJqQvVye.png)
+![alt text](image.png)
 
 Los hosts que reportan `-` en LOAD y MEMUSE andan mal. Puede ser por dos razones:
 1. Están apagadas. En ese caso reportan "unreachable" en un `ping` y error en [monit](http://penfield:2812/).
@@ -28,8 +28,7 @@ Recordando que casi todas las máquinas exportan sus discos duros a las otras m�
 En este script hay un renglón para cada máquina, quien intenta leer cada uno de los discos que deben estar en `/misc`. Si tiene éxito, pone un `.`. Si no lo logra después de _n_ segundos (timeout), pone una `T`. Si se conoce de antemano que ese mountpoint no va a estar accesible (por ejemplo, una máquina que estamos arreglando o sabemos que anda mal), entonces pone una `W` (whitelisted)[^2]
 [^2]: Los nodos whitelisted se ponen en ese estado con el script `/home/inb/soporte/admin_tools/fmrilab_disable_host.sh` (hay que ser `sudo` y estar en `hahn`). El archivo whitelist está en `/home/inb/soporte/inb_cluster_whiteList.txt`
 
-![image](https://hackmd.io/_uploads/SJX0xVvNJl.png)
-
+![alt text](image-2.png)
 
 :construction_worker: Entonces, los que debemos revisar primero son los `T`. 
 1. Podemos hacer ping a esa máquina?
