@@ -9,8 +9,6 @@ Alternativamente, podemos usar distintos comandos para ver distintos tipos de in
 ## Hosts que puede ver SGE
 Esto lo vemos con el comando `qhost`. Lo puede hacer cualquier usuario, no hace falta ser `sudo`.
 
-![alt text](image.png)
-
 Los hosts que reportan `-` en LOAD y MEMUSE andan mal. Puede ser por dos razones:
 1. Están apagadas. En ese caso reportan "unreachable" en un `ping` y error en [monit](http://penfield:2812/).
 :construction_worker: Para corregirlo hay que ir físicamente a revisar si la PC está prendida, conectada a la red, y si tiene salida de red.
