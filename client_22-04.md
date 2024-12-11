@@ -248,41 +248,4 @@ apt reboot
 
 
 # SGE
-Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas en [este link](https://hackmd.io/@lconcha/SkVKUSd39).
-
-
-## Login en `hahn`
-Ahora hacemos login somo `soporte` en `hahn` para agregar el nodo como exec y submit.
-
-```
-sudo su
-source /opt/sge/fmrilab/common/settings.sh
-qconf -mq all.q
-```
-
-Esto abrirá un editor de texto con la configuración de la cola `all.q`. Agregar el host (`NEWHOST`, usando el nombre que le dimos) a la lista de hosts. (si el editor es vi, recuerda que presionar `i` nos permitirá editar, y para salir y grabar presionamos `ESC` y escribimos: `wq`).
-
-
-
-Agregamos NEWHOST como submit host
-```
-qconf -as NEWHOSTNAME
-```
-
-Agregamos NEWHOST como exec host
-```
-qconf -ae NEWHOSTNAME
-```
-
-Es opcional, pero a mí me gusta cambiar el número máximo de slots para correr jobs de cada nuevo exec host. En general, la fórmula para número de slots es `nslots = nprocesadores - 1`. Para saber cuántos procesadores tenemos, podemos usar `nproc`.
-```
-qconf -aattr queue slots “[NEWHOSTNAME.inb.unam.mx=7]" all.q
-```
-
-
-
-
-
-
-## Netdata Cloud (ya no lo hacemos desde 2024)
-Agregar al panel de netdata cloud. Esto solo lo puede hacer lconcha en su cuenta de app.netdata.cloud. Ir a `Connect nodes` y correr el comando `wget` que viene ahí.
+Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas en [este link](./SGE_in_ubuntu22-04.md).
