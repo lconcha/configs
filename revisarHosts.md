@@ -9,6 +9,8 @@ Alternativamente, podemos usar distintos comandos para ver distintos tipos de in
 ## Hosts que puede ver SGE
 Esto lo vemos con el comando `qhost`. Lo puede hacer cualquier usuario, no hace falta ser `sudo`.
 
+![](images/2024-12-11-11-07-16.png)
+
 Los hosts que reportan `-` en LOAD y MEMUSE andan mal. Puede ser por dos razones:
 1. Están apagadas. En ese caso reportan "unreachable" en un `ping` y error en [monit](http://penfield:2812/).
 :construction_worker: Para corregirlo hay que ir físicamente a revisar si la PC está prendida, conectada a la red, y si tiene salida de red.
@@ -23,10 +25,11 @@ Los hosts que reportan `-` en LOAD y MEMUSE andan mal. Puede ser por dos razones
 ## Estado de NFS
 Recordando que casi todas las máquinas exportan sus discos duros a las otras máquinas, quienes los montan en `/misc` (y viceversa), tenemos que revisar cliente por cliente para ver si puede ver todo lo que debe de ver en `/misc`. Hay un script para eso, `inb_cluster_NFS_status_simple.sh`. Esto lo puede correr cualquier usuario, sin ser sudo. Se recomienda haber usado `ssh-copy-id` a todas las máquinas para que funcione bonito, porque de lo contrario pide password para cada una. Este script siempre se está reportando en el [monitor web](http://penfield.inb.unam.mx/monitor.html).
 
+![](images/2024-12-11-11-05-42.png)
+
 En este script hay un renglón para cada máquina, quien intenta leer cada uno de los discos que deben estar en `/misc`. Si tiene éxito, pone un `.`. Si no lo logra después de _n_ segundos (timeout), pone una `T`. Si se conoce de antemano que ese mountpoint no va a estar accesible (por ejemplo, una máquina que estamos arreglando o sabemos que anda mal), entonces pone una `W` (whitelisted)[^2]
 [^2]: Los nodos whitelisted se ponen en ese estado con el script `/home/inb/soporte/admin_tools/fmrilab_disable_host.sh` (hay que ser `sudo` y estar en `hahn`). El archivo whitelist está en `/home/inb/soporte/inb_cluster_whiteList.txt`
 
-![alt text](image-2.png)
 
 :construction_worker: Entonces, los que debemos revisar primero son los `T`. 
 1. Podemos hacer ping a esa máquina?
