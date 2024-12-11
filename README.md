@@ -13,3 +13,5 @@ Utiliza Ubuntu 22.04.
 [Información sobre backups](https://hackmd.io/dX3V_hmWQl67wTOyot4qCA) (accesible solo con permisos)
 
 [Información sobre monitores](https://hackmd.io/T34RLgJ6RpWMaY8CulDa6g) (accesible solo con permisos)
+
+[Ambientes paralelos en SGE](./parallel_SGE.md)
