@@ -15,3 +15,5 @@ Utiliza Ubuntu 22.04.
 [Información sobre monitores](https://hackmd.io/T34RLgJ6RpWMaY8CulDa6g) (accesible solo con permisos)
 
 [Ambientes paralelos en SGE](./parallel_SGE.md)
+
+[Problemas con yppasswd](./troubleshoot_yppasswd.md)
