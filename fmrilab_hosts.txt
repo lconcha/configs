@@ -36,6 +36,7 @@
 172.24.220.126	nyquist.inb.unam.mx	nyquist
 172.24.220.127  brown.inb.unam.mx	brown
 172.24.220.128  larmor.inb.unam.mx	larmor
+172.24.220.129  cajal.inb.unam.mx       cajal
 
 #
 # Lab Paredes/D-11
@@ -66,6 +67,9 @@
 # Lab ENES Guadalupe_Gomar
 172.24.220.202  opuntia.enesjuriquilla.unam.mx  opuntia
 172.24.220.201  echinopsis.enesjuriquilla.unam.mx echinopsis
+
+# ENES Raul Paredes
+172.24.220.203	hanger.enesjuriquilla.unam.mx	hanger
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback

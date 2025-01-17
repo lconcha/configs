@@ -19,15 +19,16 @@
 # NODES in cluster
 arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
-bloch -rw,soft,intr,rsize=8192,wsize=8192 bloch:/datos/bloch
 brown -rw,soft,intr,rsize=8192,wsize=8192 brown:/datos/brown
-cannabis  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis
+cajal -rw,soft,intr,rsize=8192,wsize=8192 cajal:/datos/cajal
+cannabis1  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis1
 cannabis2  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
 carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
 carr2 -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr2
 charcot   -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
 charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
+charcot3  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot3
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 damadian  -rw,soft,intr,rsize=8192,wsize=8192 damadian:/datos/damadian
@@ -42,12 +43,14 @@ geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
+hanger2	 -rw,soft,intr,rsize=8192,wsize=8192 hanger:/datos/hanger2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
 larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
 lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 lauterbur2 -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur2
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
+mansfield2 -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield2
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 moca1     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca1
 moca2     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca2
