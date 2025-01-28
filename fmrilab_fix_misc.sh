@@ -42,3 +42,4 @@ sed -i 's/#RUN=yes/RUN=yes/' /etc/default/cachefilesd
 
 service cachefilesd restart
 service autofs reload
+service autofs restart
