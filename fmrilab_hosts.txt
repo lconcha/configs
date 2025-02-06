@@ -70,6 +70,8 @@
 
 # ENES Raul Paredes
 172.24.220.203	hanger.enesjuriquilla.unam.mx	hanger
+172.24.220.204  decker.enesjuriquilla.unam.mx   decker
+172.24.220.205	dorrance.enesjuriquilla.unam.mx	dorrance
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback

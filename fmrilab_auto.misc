@@ -32,6 +32,8 @@ charcot3  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot3
 copula  -rw,soft,intr,rsize=8192,wsize=8192 copula:/datos/copula
 copula2 -rw,soft,intr,rsize=8192,wsize=8192 copula2:/datos/copula2
 damadian  -rw,soft,intr,rsize=8192,wsize=8192 damadian:/datos/damadian
+decker2   -rw,soft,intr,rsize=8192,wsize=8192 decker:/datos/decker2
+dorrance2   -rw,soft,intr,rsize=8192,wsize=8192 dorrance:/datos/dorrance2
 echinopsis1 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis1
 echinopsis2 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis2
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
@@ -43,7 +45,7 @@ geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
 giora2   -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora2
-#hanger2	 -rw,soft,intr,rsize=8192,wsize=8192 hanger:/datos/hanger2
+hanger2	 -rw,soft,intr,rsize=8192,wsize=8192 hanger:/datos/hanger2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
 larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
