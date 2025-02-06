@@ -143,11 +143,18 @@ Y para evitar problemas próximos, agregamos a `soporte` como sudoer
 visudo
 ```
 
-
 agregar:
 ```
 soporte ALL=(ALL:ALL) ALL
 ```
+
+Y también agregamos a `staff` a la lista de sudoers corriendo:
+
+```
+fmrilab_add_sudoers.sh
+```
+
+
 
 Modificamos el UID del primer usuario de esta PC, de lo contrario va a colisionar con el de lconcha en el servidor (UID=1000)
 ```
