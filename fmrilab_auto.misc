@@ -37,8 +37,8 @@ dorrance2   -rw,soft,intr,rsize=8192,wsize=8192 dorrance:/datos/dorrance2
 echinopsis1 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis1
 echinopsis2 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis2
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
-evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
-evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
+#evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
+#evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
 fourier  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
 geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
