@@ -71,7 +71,7 @@ ernst2 -rw,soft,intr,rsize=8192,wsize=8192 ernst:/datos/ernst2
 rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
-tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
+#tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
 tesla1   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla1
 tesla2   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla2
 tesla3   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla3
