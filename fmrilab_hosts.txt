@@ -37,6 +37,7 @@
 172.24.220.127  brown.inb.unam.mx	brown
 172.24.220.128  larmor.inb.unam.mx	larmor
 172.24.220.129  cajal.inb.unam.mx       cajal
+172.24.220.130  goddard.inb.unam.mx     goddard
 
 #
 # Lab Paredes/D-11
