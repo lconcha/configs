@@ -68,6 +68,7 @@
 # Lab ENES Guadalupe_Gomar
 172.24.220.202  opuntia.enesjuriquilla.unam.mx  opuntia
 172.24.220.201  echinopsis.enesjuriquilla.unam.mx echinopsis
+172.24.220.206  echinocactus.enesjuriquilla.unam.mx echinocactus
 
 # ENES Raul Paredes
 172.24.220.203	hanger.enesjuriquilla.unam.mx	hanger

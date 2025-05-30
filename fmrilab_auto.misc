@@ -36,6 +36,8 @@ decker2   -rw,soft,intr,rsize=8192,wsize=8192 decker:/datos/decker2
 dorrance2   -rw,soft,intr,rsize=8192,wsize=8192 dorrance:/datos/dorrance2
 echinopsis1 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis1
 echinopsis2 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis2
+echinopsis3 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis3
+echinocactus -rw,soft,intr,rsize=8192,wsize=8192 echinocactus:/datos/echinocactus
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 #evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 #evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
@@ -62,7 +64,8 @@ nyquist2 -rw,soft,intr,rsize=8192,wsize=8192 nyquist:/datos/nyquist2
 ogawa   -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa
 ogawa2  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa2
 ogawa3  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa3
-opuntia -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia
+opuntia  -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia
+opuntia2 -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia2
 penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
 purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
 rabi    -rw,soft,intr,rsize=8192,wsize=8192 rabi:/datos/rabi
