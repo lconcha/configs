@@ -26,7 +26,8 @@ apt -y install ssh sshfs \
   detox \
   jq \
   zsh \
-  libreoffice-java-common
+  libreoffice-java-common \
+  datamash gnuplot
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
