@@ -27,7 +27,8 @@ apt -y install ssh sshfs \
   jq \
   zsh \
   libreoffice-java-common \
-  datamash gnuplot
+  datamash gnuplot \
+  dcmtk
 
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
