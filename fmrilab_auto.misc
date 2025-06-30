@@ -52,7 +52,7 @@ hanger2	 -rw,soft,intr,rsize=8192,wsize=8192 hanger:/datos/hanger2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
 larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
-lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
+#lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 lauterbur2 -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur2
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 mansfield2 -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield2
