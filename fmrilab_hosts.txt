@@ -27,17 +27,20 @@
 172.24.80.104   sesamo.inb.unam.mx      sesamo
 172.24.220.118  rhesus.inb.unam.mx      rhesus
 172.24.220.119  mansfield.inb.unam.mx   mansfield
-172.24.220.120  bloch.inb.unam.mx       bloch
+172.24.220.120  gauss.inb.unam.mx       gauss
 172.24.220.121  hahn.inb.unam.mx        hahn
 172.24.220.122  carr.inb.unam.mx        carr
 172.24.220.123  sherrington.inb.unam.mx sherrington
 172.24.220.124  damadian.inb.unam.mx 	damadian
 172.24.220.125  ernst.inb.unam.mx       ernst
-172.24.220.126	nyquist.inb.unam.mx	nyquist
-172.24.220.127  brown.inb.unam.mx	brown
-172.24.220.128  larmor.inb.unam.mx	larmor
+172.24.220.126	nyquist.inb.unam.mx	    nyquist
+172.24.220.127  brown.inb.unam.mx	    brown
+172.24.220.128  larmor.inb.unam.mx	    larmor
 172.24.220.129  cajal.inb.unam.mx       cajal
 172.24.220.130  goddard.inb.unam.mx     goddard
+172.24.220.131  faraday.inb.unam.mx     faraday
+172.24.220.132  maxwell.inb.unam.mx     maxwell
+
 
 #
 # Lab Paredes/D-11
