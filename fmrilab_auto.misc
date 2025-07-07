@@ -41,8 +41,8 @@ echinocactus -rw,soft,intr,rsize=8192,wsize=8192 echinocactus:/datos/echinocactu
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 #evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 #evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
-faraday  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/faraday
-faraday2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/faraday2
+faraday  -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday
+faraday2 -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday2
 fourier  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
 geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
