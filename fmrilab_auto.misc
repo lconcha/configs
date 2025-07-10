@@ -58,6 +58,8 @@ larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
 lauterbur2 -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur2
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 mansfield2 -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield2
+maxwell -rw,soft,intr,rsize=8192,wsize=8192 maxwell:/datos/maxwell
+maxwell2 -rw,soft,intr,rsize=8192,wsize=8192 maxwell:/datos/maxwell2
 milagros  -rw,soft,intr,rsize=8192,wsize=8192 milagros:/datos/milagros
 moca1     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca1
 moca2     -rw,soft,intr,rsize=8192,wsize=8192 moca:/datos/moca2
