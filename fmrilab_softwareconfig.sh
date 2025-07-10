@@ -28,8 +28,9 @@ apt -y install ssh sshfs \
   zsh \
   libreoffice-java-common \
   datamash gnuplot \
-  dcmtk
-
+  dcmtk \
+  libc6:i386
+  
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
   xterm tcsh tilix \
