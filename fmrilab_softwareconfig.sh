@@ -34,7 +34,7 @@ apt -y install ssh sshfs \
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
   xterm tcsh tilix \
-  shutter \
+  shutter flameshot \
   inkscape \
   x2goclient x2goserver lxde \
   vlc \
