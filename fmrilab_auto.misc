@@ -45,6 +45,7 @@ faraday  -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday
 faraday2 -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday2
 fourier  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
+gauss  -rw,soft,intr,rsize=8192,wsize=8192 gauss:/datos/gauss
 geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
