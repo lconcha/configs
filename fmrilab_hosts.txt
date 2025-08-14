@@ -46,11 +46,15 @@
 # Lab Paredes/D-11
 172.24.220.148  copula.inb.unam.mx      copula
 172.24.220.149  copula2.inb.unam.mx     copula2
+172.24.220.150  fmenaj.inb.unam.mx      fmenaj
+
 #
 # Lab Garza/D-12
 172.24.220.153  giora.inb.unam.mx       giora
 172.24.220.154  austin.inb.unam.mx      austin
 172.24.220.155	tezca.inb.unam.mx       tezca
+172.24.220.158  tlaloc.inb.unam.mx      tlaloc
+
 172.24.100.69                           zinana
 
 #
