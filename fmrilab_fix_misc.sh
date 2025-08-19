@@ -35,11 +35,16 @@ cp -v $fmrilab_master /etc/auto.master
 
 
 
+if [ ! -f /etc/default/cachefilesd ]
+then
+  echo "Habilitando cache para NFS y teoricamente para autofs"
+  apt install cachefilesd
+fi
 
-echo "Habilitando cache para NFS y teoricamente para autofs"
-#apt install cachefilesd 
 sed -i 's/#RUN=yes/RUN=yes/' /etc/default/cachefilesd
-
+echo "Reiniciando servicios"
+echo "-- cachefilesd"
 service cachefilesd restart
+echo "-- autofs"
 service autofs reload
 service autofs restart
