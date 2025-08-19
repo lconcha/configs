@@ -19,7 +19,6 @@
 #
 # Lab Concha/C13
 172.24.220.111  fourier.inb.unam.mx     fourier
-172.24.220.112  rabi.inb.unam.mx        rabi
 172.24.220.113  penfield.inb.unam.mx    penfield
 172.24.220.114  lauterbur.inb.unam.mx	lauterbur
 172.24.220.115  tanner.inb.unam.mx      tanner
