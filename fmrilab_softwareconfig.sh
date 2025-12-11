@@ -29,7 +29,8 @@ apt -y install ssh sshfs \
   libreoffice-java-common \
   datamash gnuplot \
   dcmtk \
-  libc6:i386
+  libc6:i386 \
+  libharfbuzz-dev libfribidi-dev
   
 ## Apps
 apt -y install gnome-tweaks gnome-shell-extensions \
