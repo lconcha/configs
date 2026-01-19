@@ -26,5 +26,5 @@
 # precedence.
 #
 +auto.master
-/misc   /etc/auto.misc --timeout 600 --ghost --negative-timeout 15
+/misc   /etc/auto.misc --timeout 60 --ghost --negative-timeout 15
 #/home	/etc/auto.home --timeout 600 --ghost
