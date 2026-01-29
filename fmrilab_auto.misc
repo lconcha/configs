@@ -73,8 +73,7 @@ ogawa2  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa2
 ogawa3  -rw,soft,intr,rsize=8192,wsize=8192 ogawa:/datos/ogawa3
 opuntia  -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia
 opuntia2 -rw,soft,intr,rsize=8192,wsize=8192 opuntia:/datos/opuntia2
-penfield -rw,soft,intr,rsize=8192,wsize=8192 penfield:/datos/penfield
-purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
+#purcell -rw,soft,intr,rsize=8192,wsize=8192 purcell:/datos/purcell
 ridelim -rw,soft,intr,rsize=8192,wsize=8192 ridelim:/datos/ridelim
 ernst -rw,soft,intr,rsize=8192,wsize=8192 ernst:/datos/ernst
 ernst2 -rw,soft,intr,rsize=8192,wsize=8192 ernst:/datos/ernst2
