@@ -97,5 +97,5 @@ LabC12    -soft synology-labc12:/volume1/synologylab12
 bruker7 -ro,soft,intr,rsize=8192,wsize=8192  bruker7:/mnt
 
 # Lconcha lab backup system
-sesamo -ro,soft	sesamo:/volume1/fmrilab
+#sesamo -ro,soft	sesamo:/volume1/fmrilab
 #sesamo8 -ro,soft sesamo8:/volume1/bruker
