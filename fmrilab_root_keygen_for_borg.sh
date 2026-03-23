@@ -18,6 +18,7 @@ fi
 
 # 3. Copy the key to Tesla
 # NOTE: This will prompt for soporte@tesla's password once.
+ssh-keyscan -H tesla >> /root/.ssh/known_hosts
 echo "Copying key to Tesla (please enter soporte@tesla password if prompted)..."
 ssh-copy-id -i "$KEY_FILE" soporte@tesla
 
@@ -38,6 +39,5 @@ else
     echo "Config for 'tesla-backup' already exists. Skipping."
 fi
 
-ssh-keyscan -H tesla >> /root/.ssh/known_hosts
 
 echo "Done! You can now use 'tesla-backup' in your Borg scripts."
