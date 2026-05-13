@@ -47,6 +47,7 @@ fmenaj   -rw,soft,intr,rsize=8192,wsize=8192 fmenaj:/datos/fmenaj
 fourier  -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier
 fourier2 -rw,soft,intr,rsize=8192,wsize=8192 fourier:/datos/fourier2
 gauss  -rw,soft,intr,rsize=8192,wsize=8192 gauss:/datos/gauss
+gauss2  -rw,soft,intr,rsize=8192,wsize=8192 gauss:/datos/gauss2
 geminis  -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis
 geminis2 -rw,soft,intr,rsize=8192,wsize=8192 geminis:/datos/geminis2
 giora    -rw,soft,intr,rsize=8192,wsize=8192 giora:/datos/giora
