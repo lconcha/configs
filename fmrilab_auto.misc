@@ -17,7 +17,8 @@
 #removable	-fstype=ext2		:/dev/hdd
 
 # NODES in cluster
-arwen -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
+arwen  -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
+arwen2 -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen2
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
 #brown -rw,soft,intr,rsize=8192,wsize=8192 brown:/datos/brown
 cajal -rw,soft,intr,rsize=8192,wsize=8192 cajal:/datos/cajal
@@ -38,6 +39,7 @@ echinopsis1 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis1
 echinopsis2 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis2
 echinopsis3 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis3
 echinocactus -rw,soft,intr,rsize=8192,wsize=8192 echinocactus:/datos/echinocactus
+esperanza    -rw,soft,intr,rsize=8192,wsize=8192 esperanza:/datos/esperanza
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
 #evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
 #evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
@@ -82,6 +84,8 @@ rhesus -rw,soft,intr,rsize=8192,wsize=8192 rhesus:/datos/rhesus
 sherrington -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington
 sherrington2 -rw,soft,intr,rsize=8192,wsize=8192 sherrington:/datos/sherrington2
 #tanner  -rw,soft,intr,rsize=8192,wsize=8192 tanner:/datos/tanner
+tamesis  -rw,soft,intr,rsize=8192,wsize=8192 tamesis:/datos/tamesis
+tamesis2 -rw,soft,intr,rsize=8192,wsize=8192 tamesis:/datos/tamesis2
 tesla1   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla1
 tesla2   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla2
 tesla3   -rw,soft,intr,rsize=8192,wsize=8192 tesla:/datos/tesla3

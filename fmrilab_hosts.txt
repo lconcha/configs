@@ -62,20 +62,25 @@
 #
 # Lab Flor/C-14
 172.24.220.141  milagros.inb.unam.mx    milagros
+172.24.220.142  esperanza.inb.unam.mx   esperanza
 #
 # URRA
 172.24.220.191  purcell.inb.unam.mx     purcell
 172.24.140.48   bruker_console
 172.24.140.49   sesamo8.inb.unam.mx     sesamo8
 172.24.140.50	bruker7
+#
 # URM
 192.168.192.200 ogawa.inb.unam.mx       ogawa
-
+#
 # Lab ENES Guadalupe_Gomar
 172.24.220.202  opuntia.enesjuriquilla.unam.mx  opuntia
 172.24.220.201  echinopsis.enesjuriquilla.unam.mx echinopsis
 172.24.220.206  echinocactus.enesjuriquilla.unam.mx echinocactus
-
+#
+# Lab B03 Merlin
+172.24.220.51   tamesis.inb.unam.mx    tamesis
+#
 # ENES Raul Paredes
 172.24.220.203	hanger.enesjuriquilla.unam.mx	hanger
 172.24.220.204  decker.enesjuriquilla.unam.mx   decker
