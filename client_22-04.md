@@ -255,4 +255,22 @@ apt reboot
 
 
 # SGE
-Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas en [este link](./SGE_in_ubuntu22-04.md).
+Con la llegada del 22.04 ya no se puede usar `gridengine` desde los repositorios, pues truenan al compilar. 
+
+(Afortunadamente existe un fork y hay que compilarlo manualmente. Instrucciones completas para servidor y cliente en [este link](./SGE_in_ubuntu22-04.md).)
+
+Para un cliente, ejecutar como `root` estos dos scripts:
+
+```bash
+fmrilab_configure_SGE_step01.sh
+```
+
+:warning: Este script preguntará por el `CELL`, hay que poner `fmrilab`.
+
+:eyes: Este script copia la carpeta `/opt/sge` de otro host ya configurado. Asegúrate que ese host esté prendido o edita el script.
+
+```bash
+fmrilab_configure_SGE_step02.sh
+```
+
+Y listo, `qhost` ya lo debería ver y se deben poder enviar jobs.
