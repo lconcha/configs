@@ -45,7 +45,9 @@ Before booting from the installation media, power on the machine, enter the BIOS
 Because booting with `acpi=off` causes the installer environment to drop local configuration commits to disk right at the finish line, you must manually establish the primary user and hostname immediately on your first boot.
 
 1. Power on the workstation and repeatedly tap **`Esc`** (or hold **`Shift`**) to invoke the GRUB loader interface.
-2. Select **Advanced Options for Ubuntu** $ightarrow$ select the entry appended with **`(recovery mode)`** $ightarrow$ select **`root (Drop to root shell prompt)`**.
+2. Select **Advanced Options for Ubuntu** $
+ightarrow$ select the entry appended with **`(recovery mode)`** $
+ightarrow$ select **`root (Drop to root shell prompt)`**.
 3. Remount the filesystem root partition with write access:
    ```bash
    mount -o remount,rw /
@@ -92,33 +94,8 @@ sudo apt install ubuntu-desktop
 
 ---
 
-## Phase 6: SGE Coexistence & Resource Optimization
 
-To ensure that interactive console users utilizing the graphical environment do not accidentally starve or disrupt background processing pipelines dispatched via the Sun Grid Engine execution daemon (`sge_execd`):
-
-### 1. Enforce a Global Resource Cap on Graphical User Sessions
-```bash
-sudo systemctl edit user.slice
-```
-In the blank configuration override file presented by systemd, insert the following block:
-```ini
-[Slice]
-CPUAccounting=true
-CPUQuota=80%
-MemoryAccounting=true
-MemoryMax=110G
-```
-*Modify `CPUQuota` and `MemoryMax` based on the node's total resource footprint, leaving a dedicated, un-throttled envelope exclusively for cluster job execution.*
-
-### 2. Disable Desktop Sleep / Suspend Targets
-To prevent automated power management loops from freezing background cluster node operations during physical console inactivity, mask the sleep targets completely:
-```bash
-sudo systemctl mask suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
-```
-
----
-
-## Phase 7: Final Hardware Unlocking
+## Phase 6: Final Hardware Unlocking
 
 1. Reboot the workstation and re-enter the BIOS utility.
 2. Restore full PCIe pipeline bandwidth by switching **Resizable BAR** back to **Enabled**.
@@ -128,3 +105,10 @@ sudo systemctl mask suspend.target hibernate.target hybrid-sleep.target suspend-
    ```bash
    nvidia-smi
    ```
+
+
+## Phase 7: Desktop behavior
+Remove the pesky "which services do you want to restart" after a sudo upgrade.
+```
+sudo apt remove needrestart
+```
