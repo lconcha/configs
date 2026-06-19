@@ -1,4 +1,7 @@
 #!/bin/bash
+# specify a host that already has SGE
+remoteHost=lauterbur
+
 
 apt install git \
   build-essential \
@@ -18,6 +21,7 @@ apt install git \
 echo ""
 echo ""
 
+
 sge_user=sge
 sge_home=/opt/sge
 sge_uid=666
@@ -33,4 +37,9 @@ cmd="useradd -u ${sge_uid} -g ${sge_gid} -r -d ${sge_home} $sge_user"
 echo $cmd
 $cmd
 
+# Copy SGE from another PC
+scp -rp soporte@${remoteHost}:/opt/sge /opt/sge
+chown -R sge /opt/sge/fmrilab
 
+
+./install_execd
