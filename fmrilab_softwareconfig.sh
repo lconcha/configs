@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # UBUNTU REPOSITORIES
+sudo dpkg --add-architecture i386
+sudo apt update
 
 ## CLI apps
 apt -y install ssh sshfs \
