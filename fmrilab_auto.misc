@@ -20,13 +20,10 @@
 arwen  -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen
 arwen2 -rw,soft,intr,rsize=8192,wsize=8192 arwen:/datos/arwen2
 austin -rw,soft,intr,rsize=8192,wsize=8192 austin:/datos/austin
-#brown -rw,soft,intr,rsize=8192,wsize=8192 brown:/datos/brown
 cajal -rw,soft,intr,rsize=8192,wsize=8192 cajal:/datos/cajal
 cannabis1  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis1
 cannabis2  -rw,soft,intr,rsize=8192,wsize=8192 cannabis:/datos/cannabis2
 claustrum -rw,soft,intr,rsize=8192,wsize=8192 claustrum:/datos/claustrum
-carr -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr
-#carr2 -rw,soft,intr,rsize=8192,wsize=8192 carr:/datos/carr2
 charcot   -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot
 charcot2  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot2
 charcot3  -rw,soft,intr,rsize=8192,wsize=8192 charcot:/datos/charcot3
@@ -41,8 +38,6 @@ echinopsis3 -rw,soft,intr,rsize=8192,wsize=8192 echinopsis:/datos/echinopsis3
 echinocactus -rw,soft,intr,rsize=8192,wsize=8192 echinocactus:/datos/echinocactus
 esperanza    -rw,soft,intr,rsize=8192,wsize=8192 esperanza:/datos/esperanza
 euler -rw,soft,intr,rsize=8192,wsize=8192 euler:/datos/euler
-#evarts -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts
-#evarts2 -rw,soft,intr,rsize=8192,wsize=8192 evarts:/datos/evarts2
 faraday  -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday
 faraday2 -rw,soft,intr,rsize=8192,wsize=8192 faraday:/datos/faraday2
 fmenaj   -rw,soft,intr,rsize=8192,wsize=8192 fmenaj:/datos/fmenaj
@@ -59,7 +54,6 @@ hanger2	 -rw,soft,intr,rsize=8192,wsize=8192 hanger:/datos/hanger2
 jasper -rw,soft,intr,rsize=8192,wsize=8192 jasper:/datos/jasper
 larmor -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor
 larmor2 -rw,soft,intr,rsize=8192,wsize=8192 larmor:/datos/larmor2
-#lauterbur -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur
 lauterbur2 -rw,soft,intr,rsize=8192,wsize=8192 lauterbur:/datos/lauterbur2
 mansfield -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield
 mansfield2 -rw,soft,intr,rsize=8192,wsize=8192 mansfield:/datos/mansfield2
