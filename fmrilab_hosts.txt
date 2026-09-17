@@ -53,6 +53,8 @@
 172.24.220.154  austin.inb.unam.mx      austin
 172.24.220.155	tezca.inb.unam.mx       tezca
 172.24.220.158  tlaloc.inb.unam.mx      tlaloc
+172.24.220.159  coatl.inb.unam.mx       coatl
+172.24.220.160  quetzal.inb.unam.mx     quetzal
 
 172.24.100.69                           zinana
 
