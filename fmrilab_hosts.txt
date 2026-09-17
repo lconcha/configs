@@ -33,7 +33,7 @@
 172.24.220.124  damadian.inb.unam.mx 	damadian
 172.24.220.125  ernst.inb.unam.mx       ernst
 172.24.220.126	nyquist.inb.unam.mx	    nyquist
-172.24.220.127  brown.inb.unam.mx	    brown
+172.24.220.127  vogt.inb.unam.mx	    vogt
 172.24.220.128  larmor.inb.unam.mx	    larmor
 172.24.220.129  cajal.inb.unam.mx       cajal
 172.24.220.130  goddard.inb.unam.mx     goddard
